@@ -1086,7 +1086,7 @@
 <footer>
     <div class="footer-brand">Marjorie Mathieu — Équilibre Performance</div>
     <div class="footer-contact">
-        <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a> · +32 477 09 18 03 · Ath, Hainaut — Belgique
+        <a href="mailto:hello@ifsu-equilibre.be">hello@marjoriemathieu.be</a> · +32 477 09 18 03 · Ath, Hainaut — Belgique
     </div>
 </footer>
 
