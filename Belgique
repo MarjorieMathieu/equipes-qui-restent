@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -739,7 +740,7 @@
             <div class="spot gone"></div>
             <div class="spot open"></div>
             <div class="spot open"></div>
-            <span class="spots-txt">Pilote 2026 — <strong>2 places restantes</strong> sur 3</span>
+            <span class="spots-txt">Pilote 2026 — <strong>2 places restantes</strong> sur 3 · 1 500€ HTVA</span>
         </div>
     </div>
 
@@ -897,7 +898,7 @@
                 <div class="section-label-line"></div>
                 <div class="section-label-text">Impact financier</div>
             </div>
-            <h2>800€ investis.<br><em>ROI concret en 6 mois.</em></h2>
+            <h2>L'absentéisme vous coûte déjà.<br><em>La question, c'est combien.</em></h2>
             <p class="roi-sub">Calcul basé sur une cible de réduction de 20% de l'absentéisme — objectif réaliste sur 6 mois, pas une promesse.</p>
         </div>
 
@@ -919,7 +920,7 @@
                     <div class="roi-eq-label">Économies potentielles/an</div>
                 </div>
             </div>
-            <div class="roi-footnote">Investissement pilote : 800€ HTVA — soit un retour potentiel ×20. Ce sont des cibles transparentes, pas des garanties contractuelles.</div>
+            <div class="roi-footnote">Investissement pilote : 1 500€ HTVA — soit un retour potentiel ×10. Ce sont des cibles transparentes, pas des garanties contractuelles.</div>
         </div>
 
         <div class="roi-extras reveal d2">
@@ -1004,14 +1005,49 @@
 <!-- ═══ TARIF ═════════════════════════════════════ -->
 <section class="pricing">
     <div class="pricing-inner">
-        <div class="pricing-eyebrow reveal">Offre pilote 2026</div>
+        <div class="pricing-eyebrow reveal">Investissement & retour sur investissement</div>
         <h2 class="reveal d1">Tout inclus.<br><em>Zéro risque.</em></h2>
-        <p class="pricing-sub reveal d2">3 places uniquement. Accès réservé aux organisations validées lors du diagnostic gratuit.</p>
+        <p class="pricing-sub reveal d2">L'absentéisme vous coûte déjà. La question n'est pas de savoir si vous pouvez vous permettre d'investir — c'est de savoir combien vous perdez chaque mois à ne rien faire.</p>
 
+        <!-- Plein tarif référence -->
+        <div class="pricing-card reveal d1" style="margin-bottom:1.2rem; background:#fff; border-color:rgba(27,54,93,0.1);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:1.2rem;">
+                <div>
+                    <div class="pricing-badge" style="background:rgba(27,54,93,0.06); border-color:rgba(27,54,93,0.15); color:var(--navy);">Tarif entreprise</div>
+                    <div style="font-family:var(--serif); font-size:1rem; color:#3d4f6b; margin-top:0.5rem;">Investissement HTVA</div>
+                    <div class="price" style="font-size:3.5rem; margin-top:0.2rem;"><sup>€</sup>4 500<span style="font-size:0.3em; font-weight:400; color:var(--silver); vertical-align:middle;"> et +</span></div>
+                    <div class="price-detail">selon la taille de l'entreprise</div>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:0.7rem; min-width:220px;">
+                    <div style="display:flex; align-items:center; gap:0.6rem; font-size:0.84rem; color:#3d4f6b;">
+                        <span style="color:var(--coral); font-weight:700;">✓</span> Retour sur investissement mesuré à J+180
+                    </div>
+                    <div style="display:flex; align-items:center; gap:0.6rem; font-size:0.84rem; color:#3d4f6b;">
+                        <span style="color:var(--coral); font-weight:700;">✓</span> Garantie Jour 3 — 50% remboursé si ça ne colle pas
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offre pilote -->
         <div class="pricing-card reveal d2">
-            <div class="pricing-badge">Pilote · 3 places · 2026</div>
-            <div class="price"><sup>€</sup>800</div>
+            <div class="pricing-badge">Tarif partenaire pilote 2026 · 3 places</div>
+            <div style="display:flex; align-items:baseline; gap:1rem; flex-wrap:wrap; margin-bottom:0.3rem;">
+                <div class="price"><sup>€</sup>1 500</div>
+                <div style="font-family:var(--serif); font-size:1.3rem; color:rgba(27,54,93,0.3); text-decoration:line-through;">4 500€</div>
+            </div>
             <div class="price-detail">HTVA · Par entreprise · Tout inclus · Aucun frais caché</div>
+
+            <!-- Places dispo -->
+            <div style="display:flex; align-items:center; gap:0.5rem; margin:1.2rem 0; padding:0.8rem 1rem; background:rgba(224,122,95,0.06); border:1px solid rgba(224,122,95,0.2); border-radius:6px;">
+                <div style="display:flex; gap:0.4rem;">
+                    <div class="spot gone"></div>
+                    <div class="spot open"></div>
+                    <div class="spot open"></div>
+                </div>
+                <span style="font-size:0.82rem; color:#3d4f6b;"><strong style="color:var(--coral);">3 places disponibles</strong> — Pilote 2026</span>
+            </div>
+
             <div class="price-items">
                 <div class="price-item"><span class="price-check">✓</span> Diagnostic culture (1 semaine avant)</div>
                 <div class="price-item"><span class="price-check">✓</span> 3 semaines sur site · 1h/jour</div>
@@ -1020,8 +1056,20 @@
                 <div class="price-item"><span class="price-check">✓</span> 6 mois de check-ins mensuels</div>
                 <div class="price-item"><span class="price-check">✓</span> Rapport final données avant / après</div>
             </div>
+
+            <!-- Contreparties pilote -->
+            <div style="margin-bottom:1.5rem; padding:1rem 1.2rem; background:rgba(27,54,93,0.03); border:1px solid rgba(27,54,93,0.08); border-radius:8px;">
+                <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--silver); margin-bottom:0.7rem;">Contreparties partenaire pilote</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem;">
+                    <div style="display:flex; gap:0.5rem; font-size:0.82rem; color:#3d4f6b;"><span style="color:var(--navy); font-weight:600;">→</span> Accès direct aux équipes</div>
+                    <div style="display:flex; gap:0.5rem; font-size:0.82rem; color:#3d4f6b;"><span style="color:var(--navy); font-weight:600;">→</span> Participation active direction</div>
+                    <div style="display:flex; gap:0.5rem; font-size:0.82rem; color:#3d4f6b;"><span style="color:var(--navy); font-weight:600;">→</span> Feedback honnête J+21 et J+180</div>
+                    <div style="display:flex; gap:0.5rem; font-size:0.82rem; color:#3d4f6b;"><span style="color:var(--navy); font-weight:600;">→</span> Témoignage client en fin de mission</div>
+                </div>
+            </div>
+
             <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-book">
-                → Postuler pour le pilote — Diagnostic gratuit
+                → Discutons-en — Diagnostic gratuit
             </a>
             <p class="book-note">15 minutes · Zéro engagement · Je vous dis franchement si ça correspond</p>
             <div class="guarantee">
@@ -1074,7 +1122,7 @@
             <div class="f-spot open"></div>
             <div class="f-spot open"></div>
         </div>
-        <p class="finale-spots-txt reveal"><strong>2 places disponibles</strong> sur 3 — Pilote 2026 · 800€ HTVA</p>
+        <p class="finale-spots-txt reveal"><strong>2 places disponibles</strong> sur 3 — Pilote 2026 · 1 500€ HTVA</p>
         <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-finale reveal d2">
             → Réserver mon diagnostic gratuit
         </a>
@@ -1086,7 +1134,7 @@
 <footer>
     <div class="footer-brand">Marjorie Mathieu — Équilibre Performance</div>
     <div class="footer-contact">
-        <a href="mailto:hello@ifsu-equilibre.be">hello@ifsu-equilibre.be</a> · +32 477 09 18 03 · Ath, Hainaut — Belgique
+        <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a> · +32 477 09 18 03 · Ath, Hainaut — Belgique
     </div>
 </footer>
 
