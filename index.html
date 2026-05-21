@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -642,6 +641,119 @@
         .btn-finale:hover { background:#c9634a; transform:translateY(-2px); box-shadow:0 10px 32px rgba(224,122,95,0.3); }
         .finale-note { font-size:0.75rem; color:#3d4f6b; }
 
+        /* ── JOURNÉE TYPE ────────────────────── */
+        .dayschedule {
+            padding: 6rem 6%;
+            background: #f7f9fc;
+        }
+        .dayschedule-inner { max-width: 900px; margin: 0 auto; }
+        .dayschedule-header { margin-bottom: 3rem; }
+        .dayschedule-title {
+            font-family: var(--serif);
+            font-size: clamp(1.8rem,3.5vw,3rem);
+            font-weight: 700; line-height: 1.15;
+            color: var(--navy); margin-bottom: 0.7rem;
+        }
+        .dayschedule-title em { font-style: italic; color: var(--coral); }
+        .dayschedule-sub { font-size: 0.97rem; color: #3d4f6b; max-width: 580px; }
+
+        /* Timeline */
+        .timeline { position: relative; }
+        .timeline::before {
+            content: '';
+            position: absolute; left: 118px; top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(27,54,93,0.08), rgba(27,54,93,0.08));
+        }
+
+        .tl-row {
+            display: grid;
+            grid-template-columns: 110px 16px 1fr auto;
+            gap: 0 1rem;
+            align-items: center;
+            margin-bottom: 0;
+            position: relative;
+        }
+        .tl-row + .tl-row { margin-top: 0; }
+
+        .tl-time {
+            font-size: 0.72rem; font-weight: 700;
+            color: #8a9ab5; text-align: right;
+            padding: 0.9rem 0; line-height: 1.3;
+            white-space: nowrap;
+        }
+        .tl-dot {
+            width: 14px; height: 14px; border-radius: 50%;
+            position: relative; z-index: 1; flex-shrink: 0;
+            margin-left: 1px;
+        }
+        .dot-ritual { background: var(--coral); box-shadow: 0 0 0 3px rgba(224,122,95,0.2); }
+        .dot-work   { background: rgba(27,54,93,0.15); border: 2px solid rgba(27,54,93,0.2); width:10px; height:10px; margin-left:3px; }
+        .dot-pause  { background: rgba(184,176,164,0.4); border: 2px solid rgba(184,176,164,0.5); width:10px; height:10px; margin-left:3px; }
+
+        .tl-content { padding: 0.85rem 0.8rem; }
+
+        /* Ritual rows */
+        .ritual-row { background: rgba(224,122,95,0.04); border-radius: 8px; }
+        .ritual-block .tl-tag {
+            font-size: 0.66rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--coral); margin-bottom: 0.15rem;
+        }
+        .ritual-block .tl-name { font-weight: 700; font-size: 0.93rem; color: var(--navy); margin-bottom: 0.2rem; }
+        .ritual-block .tl-desc { font-size: 0.8rem; color: #3d4f6b; line-height: 1.55; }
+
+        /* Work rows */
+        .work-block .tl-name-work { font-weight: 600; font-size: 0.88rem; color: #4a5e7a; margin-bottom: 0.1rem; }
+        .work-block .tl-desc-work { font-size: 0.76rem; color: #8a9ab5; line-height: 1.4; }
+
+        /* Pause row */
+        .pause-block .tl-name-pause { font-weight: 600; font-size: 0.88rem; color: #8a9ab5; margin-bottom: 0.1rem; }
+        .pause-block .tl-desc-pause { font-size: 0.76rem; color: #aaa; line-height: 1.4; }
+
+        /* Badges */
+        .tl-badge {
+            font-size: 0.72rem; font-weight: 700;
+            padding: 0.25rem 0.65rem; border-radius: 100px;
+            white-space: nowrap;
+        }
+        .badge-ritual { background: rgba(224,122,95,0.12); color: var(--coral); border: 1px solid rgba(224,122,95,0.25); }
+        .badge-work   { background: rgba(27,54,93,0.05); color: #8a9ab5; }
+        .badge-pause  { background: rgba(184,176,164,0.12); color: #aaa; }
+
+        /* Totals */
+        .tl-totals {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 1rem; align-items: center;
+            margin-top: 2.5rem;
+            background: var(--navy);
+            border-radius: 12px; padding: 2rem 2.5rem;
+        }
+        .tl-total-block { text-align: center; }
+        .total-num {
+            font-family: var(--serif); font-size: 2.4rem;
+            font-weight: 700; line-height: 1; color: #fff;
+        }
+        .total-ritual .total-num { color: var(--coral-light); }
+        .total-gain   .total-num { color: #7ec8a4; }
+        .total-label { font-size: 0.82rem; font-weight: 700; color: #fff; margin-top: 0.3rem; }
+        .total-sub    { font-size: 0.72rem; color: rgba(255,255,255,0.45); margin-top: 0.15rem; }
+        .tl-total-sep { font-size: 1.4rem; color: rgba(255,255,255,0.15); text-align: center; }
+        .tl-note {
+            font-size: 0.78rem; color: #8a9ab5;
+            text-align: center; margin-top: 1.2rem; line-height: 1.6;
+            font-style: italic;
+        }
+
+        @media (max-width:680px) {
+            .timeline::before { left: 88px; }
+            .tl-row { grid-template-columns: 82px 14px 1fr auto; }
+            .tl-time { font-size: 0.64rem; }
+            .tl-badge { display: none; }
+            .tl-totals { grid-template-columns: 1fr; text-align: center; }
+            .tl-total-sep { display: none; }
+        }
+
         /* ── FOOTER ──────────────────────────── */
         footer {
             background:var(--navy-dark);
@@ -708,26 +820,26 @@
 
         <div class="eyebrow">
             <div class="eyebrow-line"></div>
-            <div class="eyebrow-text">Programme pilote · PME 50–200 collaborateurs · Hainaut & Wallonie</div>
+            <div class="eyebrow-text">Pour DRH · Responsables Prévention · CEO</div>
         </div>
 
         <h1>
-            4 rituels opérationnels.<br>
-            <em>Intégrés dans vos workflows.</em>
-            <span class="aside">Pour DRH et dirigeants de PME 50–200 personnes qui veulent une culture d'entreprise qui tient — pas un séminaire qu'on oublie en 6 semaines.</span>
+            Vous avez tout essayé.<br>
+            <em>Ils partent quand même.</em>
+            <span class="aside">Parce que la culture ne se construit pas lors d'un séminaire annuel — elle se pratique, chaque matin, dans le travail réel.</span>
         </h1>
 
         <p class="hero-quote">
-            Les séminaires s'oublient. Les budgets formation s'évaporent. Et les bons collaborateurs partent quand même — parce que la culture ne se décrète pas dans une salle, elle se construit dans les micro-moments du quotidien.
+            "On a refait les bureaux, instauré le télétravail, lancé une newsletter interne. Rien n'a changé en profondeur. Les gens restaient polis. Et ils partaient quand même."
         </p>
 
         <p class="hero-body">
-            En 3 semaines sur site, j'installe 4 rituels opérationnels directement dans vos agendas et workflows existants. Je forme 2 ambassadeurs internes qui pilotent le système <strong>6 mois après mon départ.</strong> Zéro dépendance consultante. Des données avant/après transparentes.
+            Ce que vous vivez a un nom : une <strong>culture cosmétique</strong>. Des gestes visibles qui n'entrent jamais dans les workflows quotidiens. En 3 semaines, j'installe 4 rituels opérationnels dans votre organisation — et je forme 2 ambassadeurs internes pour les faire vivre <strong>6 mois après mon départ.</strong>
         </p>
 
         <div class="hero-actions">
             <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-cta">
-                Réserver un diagnostic gratuit
+                Réserver mon diagnostic gratuit
                 <span class="btn-arrow">→</span>
             </a>
             <div class="cta-meta">
@@ -759,72 +871,19 @@
         </div>
         <div class="stats-grid">
             <div class="stat-box reveal d1">
-                <div class="stat-num">1 580€</div>
-                <div class="stat-label">Coût de l'absentéisme par employé par an</div>
-                <div class="stat-src">SD Worx 2024</div>
+                <div class="stat-num">80 000€</div>
+                <div class="stat-label">Coût annuel de l'absentéisme pour 50 collaborateurs</div>
+                <div class="stat-src">SD Worx 2024–2025</div>
             </div>
             <div class="stat-box reveal d2">
                 <div class="stat-num">+44%</div>
-                <div class="stat-label">D'arrêts longue durée en 5 ans en Belgique (troubles psychiques)</div>
-                <div class="stat-src">INAMI / VRT News 2025</div>
+                <div class="stat-label">D'arrêts longue durée en 5 ans en Belgique</div>
+                <div class="stat-src">VRT News / INAMI 2025</div>
             </div>
             <div class="stat-box reveal d3">
-                <div class="stat-num">40%</div>
-                <div class="stat-label">Des travailleurs belges concernés par le risque burn-out</div>
-                <div class="stat-src">AG Insurance 2024</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══ ROI ════════════════════════════════════════ -->
-<section class="roi">
-    <div class="roi-inner">
-        <div class="roi-header reveal">
-            <div class="section-label">
-                <div class="section-label-line"></div>
-                <div class="section-label-text">Impact financier</div>
-            </div>
-            <h2>800€ investis.<br><em>ROI concret en 6 mois.</em></h2>
-            <p class="roi-sub">Calcul basé sur une cible de réduction de 20% de l'absentéisme — objectif réaliste sur 6 mois, pas une promesse.</p>
-        </div>
-
-        <div class="roi-calc reveal d1">
-            <div class="roi-calc-tag">Pour une entreprise de 50 collaborateurs · 1 580€/employé/an · Source SD Worx 2024</div>
-            <div class="roi-equation">
-                <div class="roi-eq-block">
-                    <div class="roi-eq-num">80 000€</div>
-                    <div class="roi-eq-label">Coût absentéisme actuel/an</div>
-                </div>
-                <div class="roi-eq-op">×</div>
-                <div class="roi-eq-block">
-                    <div class="roi-eq-num">−20%</div>
-                    <div class="roi-eq-label">Cible de réduction</div>
-                </div>
-                <div class="roi-eq-op">=</div>
-                <div class="roi-eq-block result">
-                    <div class="roi-eq-num">16 000€</div>
-                    <div class="roi-eq-label">Économies potentielles/an</div>
-                </div>
-            </div>
-            <div class="roi-footnote">Investissement pilote : 800€ HTVA — soit un retour potentiel ×20. Ce sont des cibles transparentes, pas des garanties contractuelles.</div>
-        </div>
-
-        <div class="roi-extras reveal d2">
-            <div class="roi-extra">
-                <div class="roi-extra-num">+39%</div>
-                <div class="roi-extra-text">De productivité pour les équipes engagées vs désengagées</div>
-                <div class="roi-extra-src">Securex / Graydon 2024</div>
-            </div>
-            <div class="roi-extra">
-                <div class="roi-extra-num">+4–5h</div>
-                <div class="roi-extra-text">De productivité réelle récupérées par semaine via time blocking</div>
-                <div class="roi-extra-src">Résultat observé · environnement corporate</div>
-            </div>
-            <div class="roi-extra">
-                <div class="roi-extra-num">+15–18%</div>
-                <div class="roi-extra-text">De concentration mesurée avec les pauses intelligentes 90 min</div>
-                <div class="roi-extra-src">INRS · Recherche cycles ultradiens (Kleitman)</div>
+                <div class="stat-num">×3</div>
+                <div class="stat-label">Meilleure rétention dans les entreprises à culture forte</div>
+                <div class="stat-src">Securex / Graydon 2024</div>
             </div>
         </div>
     </div>
@@ -835,13 +894,13 @@
     <div class="problem-inner">
         <div class="section-label reveal">
             <div class="section-label-line"></div>
-            <div class="section-label-text">Ce que votre budget formation finance sans le savoir</div>
+            <div class="section-label-text">Ce qui ne fonctionne pas</div>
         </div>
         <h2 class="reveal d1">
             On installe un babyfoot<br>et on s'étonne que les gens <em>démissionnent encore.</em>
         </h2>
         <p class="problem-story reveal d1">
-            4 000€ de team building en septembre. Deux mois plus tard, l'ambiance était exactement la même. Ce n'est pas un cas isolé — c'est le modèle standard de ce que les entreprises belges appellent encore "investir dans leur culture".
+            "Super journée de team building en septembre. Deux mois plus tard, l'ambiance était exactement la même. On a dépensé 4 000€ pour un souvenir."
         </p>
         <p class="problem-body reveal d2">
             Les approches classiques partagent un point commun : elles se déroulent <strong>en dehors du travail réel.</strong> Un jour de séminaire ne change pas une habitude. Une conférence sur le bien-être n'ancre rien dans les workflows. Et quand le consultant repart, tout s'évapore en 6 semaines.
@@ -885,31 +944,31 @@
                 <div>
                     <div class="ritual-tag">10 min · Chaque matin</div>
                     <h4>Radio Taiso</h4>
-                    <p>Créé en 1928 par le gouvernement japonais : 13 mouvements simples — étirements, rotations, respirations — rythmés par une musique et des comptages vocaux. 3 à 5 minutes. Pratiqué chez Toyota depuis 70 ans. <strong>27 millions de pratiquants réguliers au Japon</strong> (Cabinet Office, gouvernement japonais, 2019). Zéro entreprise belge ne l'utilise encore — c'est précisément pourquoi ça crée une cohésion immédiate et mémorable dès le Jour 1.</p>
+                    <p>Pratiqué chez Toyota depuis 70 ans. 27 millions de Japonais quotidiennement. Zéro entreprise belge ne l'utilise encore — c'est précisément pourquoi ça crée une cohésion immédiate et mémorable dès le Jour 1.</p>
                 </div>
             </div>
             <div class="ritual reveal d1">
                 <div class="ritual-icon">⏸️</div>
                 <div>
-                    <div class="ritual-tag">10 min · 4× par jour (toutes les 90 min)</div>
+                    <div class="ritual-tag">5-10 min · 2× par jour</div>
                     <h4>Pauses intelligentes (cycles 90 min)</h4>
-                    <p>Le cerveau fonctionne par cycles ultrадiens de 90 minutes. Ignorer ces cycles coûte de la productivité. Les respecter avec mobilisation articulaire et respiration guidée : <strong>+15 à 18% de concentration mesurée</strong>. 4 pauses intégrées dans la journée — pour éviter notamment l'effondrement cognitif de 14h.</p>
+                    <p>Le cerveau fonctionne par cycles ultrадiens de 90 minutes. Ignorer ces cycles coûte de la productivité. Les respecter avec étirements et respiration guidée : +15-20% de concentration mesurée.</p>
                 </div>
             </div>
             <div class="ritual reveal d2">
                 <div class="ritual-icon">📅</div>
                 <div>
-                    <div class="ritual-tag">½ journée de formation · Intégré dans vos outils</div>
+                    <div class="ritual-tag">4h de formation · Intégré dans vos outils</div>
                     <h4>Time Blocking</h4>
-                    <p>Formation pratique avec intégration directe dans vos calendriers Outlook, Teams ou Google. Résultat cible : <strong>4 à 5 heures de productivité réelle récupérées par collaborateur, par semaine</strong> — via la structuration des plages de travail profond et la réduction des interruptions.</p>
+                    <p>Formation pratique avec intégration directe dans vos calendriers Outlook, Teams ou Google. Résultat cible : 2 à 3 heures de travail profond récupérées par collaborateur, par jour.</p>
                 </div>
             </div>
             <div class="ritual reveal d3">
                 <div class="ritual-icon">🤝</div>
                 <div>
-                    <div class="ritual-tag">10h de formation · Suivi 6 mois inclus</div>
+                    <div class="ritual-tag">6 mois · Suivi inclus</div>
                     <h4>Ambassadeurs internes</h4>
-                    <p>Je forme 2 relais dans votre équipe (½ journée S2 + ½ journée S3 + suivi mensuel 6 mois). Ce sont eux qui pilotent les rituels après mon départ. Pas de dépendance consultante, pas de rechute. La culture devient autonome — c'est l'objectif.</p>
+                    <p>Je forme 2 relais dans votre équipe. Ce sont eux qui pilotent les rituels après mon départ. Pas de dépendance consultante, pas de rechute. La culture devient autonome — c'est l'objectif.</p>
                 </div>
             </div>
         </div>
@@ -918,28 +977,236 @@
             <div class="phase">
                 <div class="phase-badge">Phase 0</div>
                 <div class="phase-content">
-                    <div class="phase-when">1 journée sur site (7h)</div>
+                    <div class="phase-when">1 semaine avant démarrage</div>
                     <div class="phase-name">Diagnostic & co-construction</div>
-                    <div class="phase-desc">Audit culture actuelle avec direction/RH. Co-construction des rituels adaptés à votre contexte. Identification et briefing des 2 futurs ambassadeurs. Mesure de base (engagement, absentéisme, productivité perçue).</div>
+                    <div class="phase-desc">Audit culture actuelle, identification des ambassadeurs, concertation avec DRH / Direction / Responsable Prévention. Mesure de base (engagement, absentéisme, productivité).</div>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-badge">S1–3</div>
                 <div class="phase-content">
-                    <div class="phase-when">3 semaines intensives · ~35h Marjorie au total</div>
+                    <div class="phase-when">3 semaines intensives · 1h/jour</div>
                     <div class="phase-name">Implémentation des 4 rituels</div>
-                    <div class="phase-desc">S1 : Radio Taiso + pauses ultradian (1h/jour). S2 : formation time blocking ½ journée + ½ journée ambassadeurs. S3 : co-animation ambassadeurs + bilan + transmission complète des outils et protocoles.</div>
+                    <div class="phase-desc">Formation quotidienne sur site. Mise en place progressive des rituels dans les workflows. Mesures d'engagement avant/après. Ajustements en temps réel selon les retours terrain.</div>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-badge">M1–6</div>
                 <div class="phase-content">
-                    <div class="phase-when">6 mois · 1h/mois de check-in</div>
+                    <div class="phase-when">6 mois · Check-ins mensuels</div>
                     <div class="phase-name">Consolidation par les ambassadeurs</div>
-                    <div class="phase-desc">Suivi à J+30, J+60, J+120, J+180. Les ambassadeurs pilotent, j'accompagne à distance. Rapport d'impact J+21 et J+180 avec données avant/après — absentéisme, engagement, productivité perçue.</div>
+                    <div class="phase-desc">Suivi à J+30, J+60, J+120, J+180. Les ambassadeurs pilotent, j'accompagne à distance. Rapport final complet avec données avant/après — à vous de le valoriser en interne.</div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ═══ ROI ════════════════════════════════════════ -->
+<section class="roi">
+    <div class="roi-inner">
+        <div class="roi-header reveal">
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-text">Impact financier</div>
+            </div>
+            <h2>1 500€ investis.<br><em>ROI concret en 6 mois.</em></h2>
+            <p class="roi-sub">Calcul basé sur une cible de réduction de 20% de l'absentéisme — objectif réaliste sur 6 mois, pas une promesse.</p>
+        </div>
+
+        <div class="roi-calc reveal d1">
+            <div class="roi-calc-tag">Pour une entreprise de 50 collaborateurs · Source SD Worx 2024</div>
+            <div class="roi-equation">
+                <div class="roi-eq-block">
+                    <div class="roi-eq-num">80 000€</div>
+                    <div class="roi-eq-label">Coût absentéisme actuel/an</div>
+                </div>
+                <div class="roi-eq-op">×</div>
+                <div class="roi-eq-block">
+                    <div class="roi-eq-num">−20%</div>
+                    <div class="roi-eq-label">Cible de réduction</div>
+                </div>
+                <div class="roi-eq-op">=</div>
+                <div class="roi-eq-block result">
+                    <div class="roi-eq-num">16 000€</div>
+                    <div class="roi-eq-label">Économies potentielles/an</div>
+                </div>
+            </div>
+            <div class="roi-footnote">Investissement pilote : 1 500€ HTVA — soit un retour potentiel ×10 sur la cible de réduction d'absentéisme. Ce sont des cibles transparentes, pas des garanties contractuelles.</div>
+        </div>
+
+        <div class="roi-extras reveal d2">
+            <div class="roi-extra">
+                <div class="roi-extra-num">+39%</div>
+                <div class="roi-extra-text">De productivité pour les équipes engagées vs désengagées</div>
+                <div class="roi-extra-src">Securex / Graydon 2024</div>
+            </div>
+            <div class="roi-extra">
+                <div class="roi-extra-num">+2–3h</div>
+                <div class="roi-extra-text">De travail productif récupérées par jour via time blocking</div>
+                <div class="roi-extra-src">Goldman Sachs / Yale</div>
+            </div>
+            <div class="roi-extra">
+                <div class="roi-extra-num">+15%</div>
+                <div class="roi-extra-text">De concentration mesurée avec les pauses intelligentes 90 min</div>
+                <div class="roi-extra-src">INRS / Applied Psychology</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ JOURNÉE TYPE ══════════════════════════════ -->
+<section class="dayschedule">
+    <div class="dayschedule-inner">
+        <div class="dayschedule-header reveal">
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-text">La journée type</div>
+            </div>
+            <h2 class="dayschedule-title">40 minutes par jour.<br><em>Sur 8 heures de travail.</em></h2>
+            <p class="dayschedule-sub">Les 4 rituels représentent 5 % du temps de travail. Le reste — 95 % — est du travail normal, structuré et non interrompu.</p>
+        </div>
+
+        <div class="timeline reveal d1">
+
+            <!-- 9h00 -->
+            <div class="tl-row ritual-row">
+                <div class="tl-time">9h00</div>
+                <div class="tl-dot dot-ritual"></div>
+                <div class="tl-content ritual-block">
+                    <div class="tl-tag">Rituel · 10 min</div>
+                    <div class="tl-name">Radio Taiso</div>
+                    <div class="tl-desc">Démarrage collectif. Exercices guidés, toute l'équipe ensemble. Corps activé, équipe synchronisée pour la journée.</div>
+                </div>
+                <div class="tl-badge badge-ritual">10 min</div>
+            </div>
+
+            <!-- 9h10 → 10h30 -->
+            <div class="tl-row work-row">
+                <div class="tl-time">9h10 – 10h30</div>
+                <div class="tl-dot dot-work"></div>
+                <div class="tl-content work-block">
+                    <div class="tl-name-work">Travail profond</div>
+                    <div class="tl-desc-work">Bloc de concentration non interrompu — time blocking activé</div>
+                </div>
+                <div class="tl-badge badge-work">80 min</div>
+            </div>
+
+            <!-- 10h30 -->
+            <div class="tl-row ritual-row">
+                <div class="tl-time">10h30</div>
+                <div class="tl-dot dot-ritual"></div>
+                <div class="tl-content ritual-block">
+                    <div class="tl-tag">Rituel · 10 min</div>
+                    <div class="tl-name">Pause ultradian #1</div>
+                    <div class="tl-desc">Étirements ciblés (poignets, nuque, dos). Respiration guidée. Déconnexion brève. Tensions articulaires relâchées, concentration rechargée.</div>
+                </div>
+                <div class="tl-badge badge-ritual">10 min</div>
+            </div>
+
+            <!-- 10h40 → 12h00 -->
+            <div class="tl-row work-row">
+                <div class="tl-time">10h40 – 12h00</div>
+                <div class="tl-dot dot-work"></div>
+                <div class="tl-content work-block">
+                    <div class="tl-name-work">Travail profond</div>
+                    <div class="tl-desc-work">Bloc de concentration ou réunions structurées</div>
+                </div>
+                <div class="tl-badge badge-work">80 min</div>
+            </div>
+
+            <!-- 12h00 → 13h00 -->
+            <div class="tl-row pause-row">
+                <div class="tl-time">12h00 – 13h00</div>
+                <div class="tl-dot dot-pause"></div>
+                <div class="tl-content pause-block">
+                    <div class="tl-name-pause">Pause déjeuner</div>
+                    <div class="tl-desc-pause">Pause naturelle — compte comme cycle ultradian. Aucun rituel ajouté.</div>
+                </div>
+                <div class="tl-badge badge-pause">60 min</div>
+            </div>
+
+            <!-- 13h00 → 14h30 -->
+            <div class="tl-row work-row">
+                <div class="tl-time">13h00 – 14h30</div>
+                <div class="tl-dot dot-work"></div>
+                <div class="tl-content work-block">
+                    <div class="tl-name-work">Travail profond</div>
+                    <div class="tl-desc-work">Bloc de l'après-midi — le plus difficile sans structure</div>
+                </div>
+                <div class="tl-badge badge-work">90 min</div>
+            </div>
+
+            <!-- 14h30 -->
+            <div class="tl-row ritual-row">
+                <div class="tl-time">14h30</div>
+                <div class="tl-dot dot-ritual"></div>
+                <div class="tl-content ritual-block">
+                    <div class="tl-tag">Rituel · 10 min</div>
+                    <div class="tl-name">Pause ultradian #2</div>
+                    <div class="tl-desc">Mobilisation articulaire debout. Technique de récupération attentionnelle. Évite l'effondrement cognitif de 14h–15h.</div>
+                </div>
+                <div class="tl-badge badge-ritual">10 min</div>
+            </div>
+
+            <!-- 14h40 → 16h00 -->
+            <div class="tl-row work-row">
+                <div class="tl-time">14h40 – 16h00</div>
+                <div class="tl-dot dot-work"></div>
+                <div class="tl-content work-block">
+                    <div class="tl-name-work">Travail structuré</div>
+                    <div class="tl-desc-work">Tâches administratives, suivi, communication</div>
+                </div>
+                <div class="tl-badge badge-work">80 min</div>
+            </div>
+
+            <!-- 16h00 -->
+            <div class="tl-row ritual-row">
+                <div class="tl-time">16h00</div>
+                <div class="tl-dot dot-ritual"></div>
+                <div class="tl-content ritual-block">
+                    <div class="tl-tag">Rituel · 10 min</div>
+                    <div class="tl-name">Pause ultradian #3</div>
+                    <div class="tl-desc">Étirements finaux. Clôture cognitive de la journée. Récupération articulaire en fin de session.</div>
+                </div>
+                <div class="tl-badge badge-ritual">10 min</div>
+            </div>
+
+            <!-- 16h10 → 17h00 -->
+            <div class="tl-row work-row" style="--no-line:1">
+                <div class="tl-time">16h10 – 17h00</div>
+                <div class="tl-dot dot-work"></div>
+                <div class="tl-content work-block">
+                    <div class="tl-name-work">Clôture & planification J+1</div>
+                    <div class="tl-desc-work">Revue des tâches, time blocking du lendemain</div>
+                </div>
+                <div class="tl-badge badge-work">50 min</div>
+            </div>
+        </div>
+
+        <!-- Totaux -->
+        <div class="tl-totals reveal d2">
+            <div class="tl-total-block total-ritual">
+                <div class="total-num">40 min</div>
+                <div class="total-label">Rituels actifs par jour</div>
+                <div class="total-sub">4 rituels · 5 % du temps de travail</div>
+            </div>
+            <div class="tl-total-sep">vs</div>
+            <div class="tl-total-block total-work">
+                <div class="total-num">7h20</div>
+                <div class="total-label">Travail normal</div>
+                <div class="total-sub">Concentration, réunions, tâches</div>
+            </div>
+            <div class="tl-total-sep">→</div>
+            <div class="tl-total-block total-gain">
+                <div class="total-num">4–5h</div>
+                <div class="total-label">Productivité récupérée</div>
+                <div class="total-sub">Par semaine · via time blocking</div>
+            </div>
+        </div>
+
+        <p class="tl-note reveal d3">Les horaires sont indicatifs et s'adaptent à votre organisation. Le principe non négociable : 90 minutes de travail maximum entre chaque pause.</p>
+
     </div>
 </section>
 
@@ -1007,12 +1274,17 @@
     <div class="pricing-inner">
         <div class="pricing-eyebrow reveal">Offre pilote 2026</div>
         <h2 class="reveal d1">Tout inclus.<br><em>Zéro risque.</em></h2>
-        <p class="pricing-sub reveal d2">3 places uniquement. Je sélectionne les organisations où la méthode a le plus de chances de produire des résultats mesurables — on le voit ensemble en 15 minutes.</p>
+        <p class="pricing-sub reveal d2">3 places uniquement. Accès réservé aux organisations validées lors du diagnostic gratuit.</p>
 
         <div class="pricing-card reveal d2">
             <div class="pricing-badge">Pilote · 3 places · 2026</div>
-            <div class="price"><sup>€</sup>800</div>
+            <div class="price" style="font-size:4rem;">1 500<sup style="font-size:0.35em;vertical-align:super;opacity:0.5;font-weight:400;">€</sup></div>
             <div class="price-detail">HTVA · Par entreprise · Tout inclus · Aucun frais caché</div>
+            <div style="display:inline-block; background:rgba(224,122,95,0.08); border:1px solid rgba(224,122,95,0.2); border-radius:6px; padding:0.5rem 1rem; margin-bottom:1rem; font-size:0.82rem; color:#c9634a;">Valeur réelle : 4 500€ (≤50 employés) — tarif partenaire pilote</div>
+            <div style="background:rgba(27,54,93,0.03); border:1px solid rgba(27,54,93,0.07); border-radius:8px; padding:1rem 1.2rem; margin-bottom:1.5rem; text-align:left;">
+                <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#8a9ab5; margin-bottom:0.6rem;">Contreparties demandées</div>
+                <div style="font-size:0.83rem; color:#3d4f6b; line-height:1.7;">Accès direct aux équipes · Données J+21 et J+180 partagées · Témoignage client (écrit ou vidéo) · Preuves sociales pour validation méthode</div>
+            </div>
             <div class="price-items">
                 <div class="price-item"><span class="price-check">✓</span> Diagnostic culture (1 semaine avant)</div>
                 <div class="price-item"><span class="price-check">✓</span> 3 semaines sur site · 1h/jour</div>
@@ -1043,12 +1315,12 @@
         <div class="reveal d1">
             <div class="about-eyebrow">Marjorie Mathieu</div>
             <h3>Je ne théorise pas.<br>Je <em>m'immerge.</em></h3>
-            <p>15 ans dans des environnements corporate sédentaires — BNP Paribas, Serco Europe, CEPI Brussels, KONE, STIB — m'ont appris une chose : les séminaires s'oublient, les habitudes restent. C'est pour ça que je ne fais pas de conférences. Je viens dans vos bureaux, je forme vos équipes, et je construis avec vous une culture qui tient.</p>
-            <p>14 ans de pratique et d'enseignement des techniques de régulation physique et cognitive — appliquées comme outils opérationnels, pas comme philosophie personnelle. Créatrice de la méthode Horizon Impact (2026) : performance alignée, vision stratégique et capacité humaine durable. Approche 100% data-driven — aucun résultat présenté sans source vérifiée.</p>
+            <p>15 ans dans des environnements corporate exigeants — BNP Paribas, Serco Europe, KONE, STIB — m'ont appris une chose : les séminaires s'oublient, les habitudes restent. C'est pour ça que je ne fais pas de conférences. Je viens dans vos bureaux, je forme vos équipes, et je construis avec vous une culture qui tient.</p>
+            <p>Mon approche combine rigueur opérationnelle et rituels collectifs éprouvés. Du concret intégré dans vos outils existants — pas de la théorie sur slides, pas de jargon bien-être. Des résultats mesurables, avec données avant/après transparentes.</p>
             <div class="about-tags">
-                <span class="about-tag">BNP Paribas · Serco · CEPI Brussels · KONE · STIB</span>
+                <span class="about-tag">BNP Paribas · Serco · KONE · STIB</span>
                 <span class="about-tag">15 ans corporate</span>
-                <span class="about-tag">14 ans de pratique des rituels de performance collective</span>
+                <span class="about-tag">10+ ans yoga & méditation</span>
                 <span class="about-tag">Formatrice IA — Kitchy Agency</span>
                 <span class="about-tag">Smart Coop · Ath, Hainaut</span>
             </div>
@@ -1067,10 +1339,7 @@
             La culture ne se décrète pas.<br>Elle se <em>pratique, chaque matin.</em>
         </h2>
         <p class="finale-sub reveal d2">
-            15 minutes pour voir si votre organisation correspond au profil. Je vous dis franchement ce que j'observe — et si le pilote a du sens pour vous. Sans argumentaire de vente. Sans engagement.
-        </p>
-        <p class="finale-sub reveal d2" style="font-size:0.88rem; opacity:0.75; margin-top:0.5rem;">
-            Et si après 3 jours terrain vous estimez que la méthode ne correspond pas à votre réalité : vous stoppez, vous récupérez 50% de votre investissement, vous gardez tous les outils reçus.
+            15 minutes pour voir si votre organisation est prête. Je vous dis franchement ce que j'observe — et si le pilote a du sens pour vous. Sans argumentaire de vente. Sans engagement.
         </p>
         <div class="finale-sep reveal"></div>
         <div class="finale-spots reveal">
@@ -1078,9 +1347,9 @@
             <div class="f-spot open"></div>
             <div class="f-spot open"></div>
         </div>
-        <p class="finale-spots-txt reveal"><strong>2 places disponibles</strong> sur 3 — Pilote 2026 · 800€ HTVA</p>
+        <p class="finale-spots-txt reveal"><strong>2 places disponibles</strong> sur 3 — Pilote 2026 · 1 500€ HTVA</p>
         <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-finale reveal d2">
-            → Réserver un diagnostic gratuit
+            → Réserver mon diagnostic gratuit
         </a>
         <p class="finale-note reveal d3">15 minutes · Zéro engagement · Diagnostic offert</p>
     </div>
