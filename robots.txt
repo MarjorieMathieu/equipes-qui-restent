@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marjoriemathieu.be/sitemap.xml
