@@ -1,43 +1,10 @@
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Équilibre Performance — Méthode de performance durable pour entreprises belges</title>
-    <meta name="description" content="4 routines opérationnelles installées en 4 semaines dans vos équipes sédentaires. Réduction de l'absentéisme, maintien de la concentration, ambassadeurs internes formés. Entreprises 50–200 collaborateurs, Hainaut, Wallonie et Bruxelles.">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Marjorie Mathieu">
-    <link rel="canonical" href="https://ifsu-equilibre.online/">
-
-    <!-- Open Graph (LinkedIn, partage) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ifsu-equilibre.online/">
-    <meta property="og:title" content="Équilibre Performance — Méthode de performance durable pour entreprises belges">
-    <meta property="og:description" content="4 routines opérationnelles. 4 semaines sur site. 2 ambassadeurs internes formés. Réduction de l'absentéisme mesurable à J+180. Entreprises 50–200 collaborateurs, Belgique francophone.">
-    <meta property="og:locale" content="fr_BE">
-
-    <!-- Données structurées (Google rich results) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Équilibre Performance",
-      "description": "Méthode de performance durable pour équipes sédentaires. 4 routines opérationnelles installées en 4 semaines. Entreprises 50–200 collaborateurs, Belgique francophone.",
-      "url": "https://ifsu-equilibre.online/",
-      "telephone": "+32477091803",
-      "email": "hello@marjoriemathieu.be",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ath",
-        "addressRegion": "Hainaut",
-        "addressCountry": "BE"
-      },
-      "areaServed": ["Hainaut", "Wallonie", "Bruxelles"],
-      "founder": {
-        "@type": "Person",
-        "name": "Marjorie Mathieu"
-      }
-    }
-    </script>
+    <title>Momentum 180 — Pilote 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -123,7 +90,7 @@
             position:absolute; right:4%; top:50%;
             transform:translateY(-50%);
             font-family: var(--serif);
-            font-size: clamp(200px,24vw,360px);
+            font-size: clamp(160px,20vw,280px);
             font-weight:700; font-style:italic;
             color: rgba(27,54,93,0.03);
             line-height:1; pointer-events:none; user-select:none;
@@ -199,7 +166,6 @@
             opacity:0; animation: up 1s ease 0.95s forwards;
         }
         .spot { width:9px; height:9px; border-radius:50%; }
-        .spot.gone { background:rgba(27,54,93,0.12); border:1px solid rgba(27,54,93,0.2); }
         .spot.open  { background:var(--coral); }
         .spots-txt { font-size:0.75rem; color:#3d4f6b; margin-left:0.3rem; }
         .spots-txt strong { color:var(--coral); }
@@ -243,8 +209,14 @@
             font-size:0.88rem; color:rgba(255,255,255,0.6);
             margin-top:0.8rem; line-height:1.7;
         }
+        .stats-intro .stats-note {
+            font-size:0.75rem; color:rgba(255,255,255,0.4);
+            margin-top:1.2rem; line-height:1.6;
+            border-top:1px solid rgba(255,255,255,0.08);
+            padding-top:1rem;
+        }
         .stats-grid {
-            display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
+            display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;
         }
         .stat-box {
             background:rgba(255,255,255,0.04);
@@ -262,10 +234,233 @@
         .stat-label { font-size:0.8rem; color:rgba(255,255,255,0.6); line-height:1.5; }
         .stat-src   { font-size:0.65rem; color:rgba(255,255,255,0.25); margin-top:0.4rem; }
 
-        /* ── PROBLÈME (narrative) ────────────── */
-        .problem {
+        /* ── CALCULATEUR ─────────────────────── */
+        .calculator {
             padding: 6rem 6%;
+            background: #f8f7f5;
         }
+        .calculator-inner { max-width: 860px; margin: 0 auto; }
+        .calculator-header { margin-bottom: 3rem; }
+        .calculator-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-weight: 700; line-height: 1.15; color: var(--navy);
+            margin-bottom: 0.7rem;
+        }
+        .calculator-header h2 em { font-style: italic; color: var(--coral); }
+        .calculator-header p { font-size: 0.97rem; color: #3d4f6b; line-height: 1.7; }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .calc-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .calc-field label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--navy);
+        }
+        .calc-field .field-hint {
+            font-size: 0.72rem;
+            color: #6b7fa0;
+            margin-top: -0.3rem;
+        }
+        .calc-field input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background: #dde3ed;
+            outline: none;
+            cursor: pointer;
+        }
+        .calc-field input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: var(--coral);
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 1px 6px rgba(224,122,95,0.4);
+            transition: transform 0.15s;
+        }
+        .calc-field input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+        .calc-field input[type="range"]::-moz-range-thumb {
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: var(--coral);
+            cursor: pointer;
+            border: 3px solid white;
+        }
+        .range-val {
+            font-family: var(--serif);
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+        }
+        .range-unit {
+            font-size: 0.75rem;
+            color: #6b7fa0;
+            margin-top: 2px;
+        }
+
+        .calc-select {
+            padding: 0.7rem 1rem;
+            border: 1px solid rgba(27,54,93,0.15);
+            border-radius: 6px;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            color: var(--navy);
+            background: white;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231B365D' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 2rem;
+        }
+
+        .calc-loi-banner {
+            background: rgba(224,122,95,0.08);
+            border: 1px solid rgba(224,122,95,0.25);
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            font-size: 0.82rem;
+            color: #5a3328;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .calc-loi-banner strong { color: var(--coral); }
+
+        .calc-result {
+            background: var(--navy-dark);
+            border-radius: 14px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .calc-result::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 60% 60% at 90% 10%, rgba(224,122,95,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .calc-result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .calc-res-block {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            padding: 1.2rem 1rem;
+        }
+        .calc-res-block.highlight {
+            background: rgba(224,122,95,0.15);
+            border-color: rgba(224,122,95,0.3);
+        }
+        .calc-res-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .calc-res-val {
+            font-family: var(--serif);
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+        }
+        .calc-res-block.highlight .calc-res-val { color: var(--coral-light); font-size: 2.2rem; }
+        .calc-res-sub {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+
+        .calc-roi-bar {
+            margin-top: 1.5rem;
+        }
+        .calc-roi-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 0.5rem;
+        }
+        .calc-roi-track {
+            background: rgba(255,255,255,0.08);
+            border-radius: 4px;
+            height: 8px;
+            overflow: hidden;
+        }
+        .calc-roi-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--coral-light));
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0%;
+        }
+
+        .calc-verdict {
+            margin-top: 1.5rem;
+            padding: 1rem 1.2rem;
+            background: rgba(255,255,255,0.04);
+            border-left: 2px solid var(--coral);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .calc-cta {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .calc-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--coral);
+            color: white;
+            padding: 0.8rem 1.6rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+        .calc-cta a:hover { background: #c9634a; transform: translateY(-1px); }
+        .calc-cta-note {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.5;
+        }
+
+        /* ── PROBLÈME (narrative) ────────────── */
+        .problem { padding: 6rem 6%; }
         .problem-inner { max-width:820px; margin:0 auto; }
         .section-label {
             display:flex; align-items:center; gap:0.7rem;
@@ -295,6 +490,22 @@
             line-height:1.75; margin-bottom:1rem;
         }
         .problem-body strong { color:var(--navy); font-weight:600; }
+        .problem-chains {
+            margin-top:2rem; margin-bottom:2rem;
+            display:grid; grid-template-columns:1fr 1fr; gap:1rem;
+        }
+        .chain {
+            background:#fff;
+            border:1px solid rgba(27,54,93,0.08);
+            border-top:2px solid var(--coral);
+            border-radius:8px; padding:1.2rem 1.4rem;
+        }
+        .chain-label {
+            font-size:0.68rem; font-weight:700; text-transform:uppercase;
+            letter-spacing:0.1em; color:var(--coral); margin-bottom:0.6rem;
+        }
+        .chain-text { font-size:0.84rem; color:#3d4f6b; line-height:1.7; }
+        .chain-text strong { color:var(--navy); }
         .problem-traps {
             display:grid; grid-template-columns:1fr 1fr;
             gap:0.8rem; margin-top:2.5rem;
@@ -366,7 +577,6 @@
         }
         .ritual p { font-size:0.84rem; color:rgba(255,255,255,0.75); line-height:1.6; }
 
-        /* Timeline phases */
         .phases {
             background:rgba(255,255,255,0.04);
             border:1px solid rgba(255,255,255,0.08);
@@ -434,10 +644,7 @@
             font-weight:700; color:#fff; line-height:1;
         }
         .roi-eq-label { font-size:0.72rem; color:rgba(255,255,255,0.6); margin-top:0.3rem; }
-        .roi-eq-op {
-            font-size:1.5rem; color:rgba(255,255,255,0.2);
-            text-align:center;
-        }
+        .roi-eq-op { font-size:1.5rem; color:rgba(255,255,255,0.2); text-align:center; }
         .roi-eq-block.result {
             border-color:rgba(224,122,95,0.3);
             background:rgba(224,122,95,0.1);
@@ -551,6 +758,12 @@
             font-weight:700; line-height:1; color:var(--navy);
         }
         .price sup { font-size:0.35em; vertical-align:super; opacity:0.5; font-weight:400; }
+        .price-anchor {
+            font-size:0.8rem;
+            color:#8a9ab5;
+            text-decoration:line-through;
+            margin-bottom:0.1rem;
+        }
         .price-detail { font-size:0.8rem; color:#3d4f6b; margin-top:0.3rem; margin-bottom:2rem; }
         .price-items {
             display:grid; grid-template-columns:1fr 1fr;
@@ -573,17 +786,16 @@
         .btn-book:hover { background:#c9634a; transform:translateY(-2px); box-shadow:0 10px 30px rgba(224,122,95,0.35); }
         .book-note { font-size:0.75rem; color:#3d4f6b; }
 
-        .guarantee {
+        .counterparts {
             margin-top:1.8rem;
             padding:1.4rem 1.6rem;
             background:rgba(27,54,93,0.03);
             border:1px solid rgba(27,54,93,0.08);
             border-radius:8px;
-            display:flex; gap:0.9rem; text-align:left;
+            text-align:left;
         }
-        .guarantee-icon { font-size:1.4rem; flex-shrink:0; }
-        .guarantee-title { font-weight:700; font-size:0.9rem; color:var(--navy); margin-bottom:0.2rem; }
-        .guarantee-text  { font-size:0.8rem; color:#3d4f6b; line-height:1.6; }
+        .counterparts-title { font-weight:700; font-size:0.88rem; color:var(--navy); margin-bottom:0.6rem; }
+        .counterparts-text  { font-size:0.8rem; color:#3d4f6b; line-height:1.7; }
 
         /* ── À PROPOS ────────────────────────── */
         .about { padding:6rem 6%; background:var(--navy-dark); }
@@ -630,6 +842,25 @@
         }
         .about-link:hover { border-color:var(--coral-light); }
 
+        /* ── OBJECTIONS ──────────────────────── */
+        .objections { padding:6rem 6%; }
+        .objections-inner { max-width:780px; margin:0 auto; }
+        .objections h2 {
+            font-family:var(--serif);
+            font-size:clamp(1.6rem,3vw,2.4rem);
+            font-weight:700; color:var(--navy);
+            margin-bottom:2.5rem; line-height:1.2;
+        }
+        .objection { margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid rgba(27,54,93,0.07); }
+        .objection:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+        .objection-q {
+            font-family:var(--serif); font-style:italic;
+            font-size:1.05rem; color:var(--navy);
+            margin-bottom:0.6rem; font-weight:600;
+        }
+        .objection-a { font-size:0.92rem; color:#3d4f6b; line-height:1.75; }
+        .objection-a strong { color:var(--navy); }
+
         /* ── FINALE ──────────────────────────── */
         .finale {
             padding:7rem 6%;
@@ -662,12 +893,11 @@
             display:flex; justify-content:center; gap:0.5rem; margin-bottom:0.6rem;
         }
         .f-spot { width:10px; height:10px; border-radius:50%; }
-        .f-spot.gone { background:rgba(27,54,93,0.12); border:1px solid rgba(27,54,93,0.2); }
         .f-spot.open { background:var(--coral); }
         .finale-spots-txt { font-size:0.75rem; color:#3d4f6b; margin-bottom:2rem; }
         .finale-spots-txt strong { color:var(--coral); }
         .btn-finale {
-            display:block; max-width:360px; margin:0 auto 1rem;
+            display:block; max-width:380px; margin:0 auto 1rem;
             background:var(--coral); color:#fff;
             padding:1.15rem 2rem; border-radius:6px;
             text-decoration:none; font-size:0.97rem; font-weight:700;
@@ -675,119 +905,6 @@
         }
         .btn-finale:hover { background:#c9634a; transform:translateY(-2px); box-shadow:0 10px 32px rgba(224,122,95,0.3); }
         .finale-note { font-size:0.75rem; color:#3d4f6b; }
-
-        /* ── JOURNÉE TYPE ────────────────────── */
-        .dayschedule {
-            padding: 6rem 6%;
-            background: #f7f9fc;
-        }
-        .dayschedule-inner { max-width: 900px; margin: 0 auto; }
-        .dayschedule-header { margin-bottom: 3rem; }
-        .dayschedule-title {
-            font-family: var(--serif);
-            font-size: clamp(1.8rem,3.5vw,3rem);
-            font-weight: 700; line-height: 1.15;
-            color: var(--navy); margin-bottom: 0.7rem;
-        }
-        .dayschedule-title em { font-style: italic; color: var(--coral); }
-        .dayschedule-sub { font-size: 0.97rem; color: #3d4f6b; max-width: 580px; }
-
-        /* Timeline */
-        .timeline { position: relative; }
-        .timeline::before {
-            content: '';
-            position: absolute; left: 118px; top: 0; bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, rgba(27,54,93,0.08), rgba(27,54,93,0.08));
-        }
-
-        .tl-row {
-            display: grid;
-            grid-template-columns: 110px 16px 1fr auto;
-            gap: 0 1rem;
-            align-items: center;
-            margin-bottom: 0;
-            position: relative;
-        }
-        .tl-row + .tl-row { margin-top: 0; }
-
-        .tl-time {
-            font-size: 0.72rem; font-weight: 700;
-            color: #8a9ab5; text-align: right;
-            padding: 0.9rem 0; line-height: 1.3;
-            white-space: nowrap;
-        }
-        .tl-dot {
-            width: 14px; height: 14px; border-radius: 50%;
-            position: relative; z-index: 1; flex-shrink: 0;
-            margin-left: 1px;
-        }
-        .dot-ritual { background: var(--coral); box-shadow: 0 0 0 3px rgba(224,122,95,0.2); }
-        .dot-work   { background: rgba(27,54,93,0.15); border: 2px solid rgba(27,54,93,0.2); width:10px; height:10px; margin-left:3px; }
-        .dot-pause  { background: rgba(184,176,164,0.4); border: 2px solid rgba(184,176,164,0.5); width:10px; height:10px; margin-left:3px; }
-
-        .tl-content { padding: 0.85rem 0.8rem; }
-
-        /* Ritual rows */
-        .ritual-row { background: rgba(224,122,95,0.04); border-radius: 8px; }
-        .ritual-block .tl-tag {
-            font-size: 0.66rem; font-weight: 700; text-transform: uppercase;
-            letter-spacing: 0.1em; color: var(--coral); margin-bottom: 0.15rem;
-        }
-        .ritual-block .tl-name { font-weight: 700; font-size: 0.93rem; color: var(--navy); margin-bottom: 0.2rem; }
-        .ritual-block .tl-desc { font-size: 0.8rem; color: #3d4f6b; line-height: 1.55; }
-
-        /* Work rows */
-        .work-block .tl-name-work { font-weight: 600; font-size: 0.88rem; color: #4a5e7a; margin-bottom: 0.1rem; }
-        .work-block .tl-desc-work { font-size: 0.76rem; color: #8a9ab5; line-height: 1.4; }
-
-        /* Pause row */
-        .pause-block .tl-name-pause { font-weight: 600; font-size: 0.88rem; color: #8a9ab5; margin-bottom: 0.1rem; }
-        .pause-block .tl-desc-pause { font-size: 0.76rem; color: #aaa; line-height: 1.4; }
-
-        /* Badges */
-        .tl-badge {
-            font-size: 0.72rem; font-weight: 700;
-            padding: 0.25rem 0.65rem; border-radius: 100px;
-            white-space: nowrap;
-        }
-        .badge-ritual { background: rgba(224,122,95,0.12); color: var(--coral); border: 1px solid rgba(224,122,95,0.25); }
-        .badge-work   { background: rgba(27,54,93,0.05); color: #8a9ab5; }
-        .badge-pause  { background: rgba(184,176,164,0.12); color: #aaa; }
-
-        /* Totals */
-        .tl-totals {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr auto 1fr;
-            gap: 1rem; align-items: center;
-            margin-top: 2.5rem;
-            background: var(--navy);
-            border-radius: 12px; padding: 2rem 2.5rem;
-        }
-        .tl-total-block { text-align: center; }
-        .total-num {
-            font-family: var(--serif); font-size: 2.4rem;
-            font-weight: 700; line-height: 1; color: #fff;
-        }
-        .total-ritual .total-num { color: var(--coral-light); }
-        .total-gain   .total-num { color: #7ec8a4; }
-        .total-label { font-size: 0.82rem; font-weight: 700; color: #fff; margin-top: 0.3rem; }
-        .total-sub    { font-size: 0.72rem; color: rgba(255,255,255,0.45); margin-top: 0.15rem; }
-        .tl-total-sep { font-size: 1.4rem; color: rgba(255,255,255,0.15); text-align: center; }
-        .tl-note {
-            font-size: 0.78rem; color: #8a9ab5;
-            text-align: center; margin-top: 1.2rem; line-height: 1.6;
-            font-style: italic;
-        }
-
-        @media (max-width:680px) {
-            .timeline::before { left: 88px; }
-            .tl-row { grid-template-columns: 82px 14px 1fr auto; }
-            .tl-time { font-size: 0.64rem; }
-            .tl-badge { display: none; }
-            .tl-totals { grid-template-columns: 1fr; text-align: center; }
-            .tl-total-sep { display: none; }
-        }
 
         /* ── FOOTER ──────────────────────────── */
         footer {
@@ -819,13 +936,15 @@
             .stats-grid { grid-template-columns:1fr 1fr; }
             .rituals { grid-template-columns:1fr; }
             .problem-traps { grid-template-columns:1fr; }
-            .mechanism-grid { grid-template-columns:1fr !important; }
+            .problem-chains { grid-template-columns:1fr; }
             .roi-equation { grid-template-columns:1fr; }
             .roi-eq-op { display:none; }
             .roi-extras { grid-template-columns:1fr; }
             .about-inner { grid-template-columns:1fr; text-align:center; }
             .about-tags { justify-content:center; }
             .about-avatar { margin:0 auto; }
+            .calc-grid { grid-template-columns:1fr; }
+            .calc-result-grid { grid-template-columns:1fr; }
         }
         @media (max-width:680px) {
             .hero h1 { font-size:2.2rem; }
@@ -845,49 +964,50 @@
 
 <!-- ═══ NAV ═══════════════════════════════════════ -->
 <nav id="nav">
-    <div class="nav-logo">Équilibre Performance</div>
-    <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="nav-cta">Diagnostic gratuit →</a>
+    <div class="nav-logo">Momentum 180</div>
+    <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="nav-cta">Diagnostic — 15 min →</a>
 </nav>
 
 <!-- ═══ HERO ══════════════════════════════════════ -->
 <section class="hero">
-    <div class="hero-ornament">EP</div>
+    <div class="hero-ornament">180</div>
     <div class="hero-inner">
 
         <div class="eyebrow">
             <div class="eyebrow-line"></div>
-            <div class="eyebrow-text">Pour DRH · Responsables Prévention · CEO</div>
+            <div class="eyebrow-text">Programme pilote · Organisations 50–200 collaborateurs · Hainaut &amp; Wallonie</div>
         </div>
 
         <h1>
-            Vous avez tout essayé.<br>
-            <em>Ils partent quand même.</em>
-            <span class="aside">Parce que la culture ne se construit pas lors d'un séminaire annuel — elle se pratique, chaque matin, dans le travail réel.</span>
+            Personne n'a conçu<br>
+            <em>la journée de travail</em><br>
+            dans votre entreprise.
+            <span class="aside">Elle s'est juste imposée. Et chaque mois, vos équipes accumulent de la fatigue que personne ne voit — jusqu'au jour où l'arrêt maladie tombe.</span>
         </h1>
 
         <p class="hero-quote">
-            "On a refait les bureaux, instauré le télétravail, lancé une newsletter interne. Rien n'a changé en profondeur. Les gens restaient polis. Et ils partaient quand même."
+            Ce programme ne traite pas les absences. Il prévient les causes qui transforment la fatigue quotidienne en arrêt longue durée — le poste qui explose depuis 5 ans.
         </p>
 
         <p class="hero-body">
-            Ce que vous vivez a un nom : une <strong>culture cosmétique</strong>. Des gestes visibles qui n'entrent jamais dans les workflows quotidiens. En 4 semaines, j'installe 4 routines opérationnelles dans votre organisation — et je forme 2 ambassadeurs internes pour les faire vivre <strong>6 mois après mon départ.</strong>
+            4 routines opérationnelles intégrées dans vos workflows existants. 4 semaines sur site. 6 mois de consolidation. <strong>Résultats mesurés à J+180.</strong> La méthode reste quand je pars — zéro dépendance consultante.
         </p>
 
         <div class="hero-actions">
             <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-cta">
-                Réserver mon diagnostic gratuit
+                15 minutes pour voir si ça correspond
                 <span class="btn-arrow">→</span>
             </a>
             <div class="cta-meta">
-                <strong>15 minutes · Zéro engagement</strong>
-                Je vous dis si votre entreprise correspond au profil — ou pas.
+                <strong>Pas un pitch. Un diagnostic honnête.</strong>
+                Je vous dis franchement si votre organisation correspond au profil — ou pas.
             </div>
         </div>
 
         <div class="spots-row">
             <div class="spot open"></div>
             <div class="spot open"></div>
-            <span class="spots-txt">Pilote 2026 — <strong>2 places partenaires</strong></span>
+            <span class="spots-txt">Pilote 2026 — <strong>2 organisations partenaires</strong></span>
         </div>
     </div>
 
@@ -901,51 +1021,125 @@
 <section class="stats-band">
     <div class="stats-band-inner">
         <div class="stats-intro reveal">
-            <h2>Ce que coûte le désengagement <em>dans votre bilan.</em></h2>
-            <p>Ces chiffres concernent des entreprises belges ordinaires. Peut-être la vôtre.</p>
+            <h2>Ce que coûtent les absences longue durée <em>dans votre bilan.</em></h2>
+            <p>Ces chiffres concernent des organisations belges ordinaires. Peut-être la vôtre.</p>
+            <p class="stats-note">Depuis janvier 2026 : les employeurs de 50+ travailleurs paient 30% des indemnités maladie des 2e et 3e mois d'incapacité. Le coût d'un arrêt longue durée ne se limite plus au salaire garanti.<br><em>Loi fédérale 1er janvier 2026 · SD Worx · Le Soir</em></p>
         </div>
         <div class="stats-grid">
             <div class="stat-box reveal d1">
-                <div class="stat-num">1 580€</div>
-                <div class="stat-label">Par employé et par an, en coût direct d'absentéisme</div>
-                <div class="stat-src">SD Worx 2024</div>
+                <div class="stat-num">165 425€</div>
+                <div class="stat-label">Coût de l'absentéisme pour 100 ETP en Hainaut</div>
+                <div class="stat-src">SD Worx 2025</div>
             </div>
             <div class="stat-box reveal d2">
                 <div class="stat-num">+94%</div>
                 <div class="stat-label">De burn-out en 6 ans en Belgique</div>
                 <div class="stat-src">Mutualités Libres 2024</div>
             </div>
-            <div class="stat-box reveal d3">
-                <div class="stat-num">+44%</div>
-                <div class="stat-label">D'arrêts longue durée en 5 ans</div>
-                <div class="stat-src">VRT News / INAMI 2025</div>
-            </div>
             <div class="stat-box reveal d1">
-                <div class="stat-num">165 425€</div>
-                <div class="stat-label">Coût / 100 ETP en Hainaut</div>
-                <div class="stat-src">SD Worx 2025</div>
+                <div class="stat-num">+44%</div>
+                <div class="stat-label">D'arrêts longue durée en 5 ans (2018–2023)</div>
+                <div class="stat-src">INAMI / VRT News 2025</div>
             </div>
             <div class="stat-box reveal d2">
                 <div class="stat-num">40%</div>
-                <div class="stat-label">Des travailleurs belges à risque</div>
+                <div class="stat-label">Des travailleurs belges concernés par le risque de burn-out</div>
                 <div class="stat-src">AG Insurance 2024</div>
-            </div>
-            <div class="stat-box reveal d3">
-                <div class="stat-num">3<sup style="font-size:0.5em;">e</sup></div>
-                <div class="stat-label">Secteur le plus touché : les services administratifs</div>
-                <div class="stat-src">RTL Info, janv. 2026</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══ URGENCE LOI 2026 ═════════════════════════ -->
-<section style="padding:3rem 6%; background:rgba(224,122,95,0.06); border-top:2px solid rgba(224,122,95,0.15); border-bottom:2px solid rgba(224,122,95,0.15);">
-    <div style="max-width:820px; margin:0 auto; text-align:center;" class="reveal">
-        <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:var(--coral); margin-bottom:1rem;">Depuis janvier 2026</div>
-        <h2 style="font-family:var(--serif); font-size:clamp(1.4rem,2.8vw,2.2rem); font-weight:700; color:var(--navy); line-height:1.25; margin-bottom:1rem;">Chaque arrêt longue durée coûte <em style="font-style:italic; color:var(--coral);">encore plus cher.</em></h2>
-        <p style="font-size:0.95rem; color:#3d4f6b; line-height:1.75; max-width:640px; margin:0 auto 1.5rem;">Nouvelle cotisation de solidarité : les employeurs de 50+ travailleurs paient désormais <strong style="color:var(--navy);">30% des indemnités maladie des 2<sup>e</sup> et 3<sup>e</sup> mois d'incapacité.</strong> Le coût d'un arrêt longue durée ne se limite plus au salaire garanti.</p>
-        <p style="font-size:0.72rem; color:#8a9ab5; font-style:italic;">Loi fédérale 1<sup>er</sup> janvier 2026 · SD Worx · Le Soir · RTL Info</p>
+<!-- ═══ CALCULATEUR ROI ═══════════════════════════ -->
+<section class="calculator" id="calculateur">
+    <div class="calculator-inner">
+        <div class="calculator-header reveal">
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-text">Calculateur de coût réel</div>
+            </div>
+            <h2>Combien vous coûte<br><em>l'absentéisme aujourd'hui ?</em></h2>
+            <p>Ajustez les curseurs selon votre situation réelle. Les chiffres s'adaptent instantanément — basés sur les données SD Worx 2025 et la loi fédérale belge de janvier 2026.</p>
+        </div>
+
+        <div class="calc-loi-banner reveal d1">
+            <strong>⚠ Loi fédérale du 1er janvier 2026 :</strong> Les employeurs de 50+ travailleurs paient désormais 30% des indemnités maladie des 2e et 3e mois d'incapacité. Ce calculateur intègre ce surcoût dans le total.
+        </div>
+
+        <div class="calc-grid reveal d2">
+            <div class="calc-field">
+                <label>Nombre de collaborateurs</label>
+                <div class="field-hint">Effectif total de votre organisation</div>
+                <div class="range-val" id="etp-val">75</div>
+                <div class="range-unit">collaborateurs (ETP)</div>
+                <input type="range" id="etp" min="10" max="300" step="5" value="75" oninput="updateCalc()">
+            </div>
+            <div class="calc-field">
+                <label>Taux d'absentéisme actuel</label>
+                <div class="field-hint">Moyenne belge : 6,9% (SD Worx 2025)</div>
+                <div class="range-val" id="taux-val">6.9<span style="font-size:1.2rem">%</span></div>
+                <div class="range-unit">du temps de travail</div>
+                <input type="range" id="taux" min="2" max="18" step="0.1" value="6.9" oninput="updateCalc()">
+            </div>
+            <div class="calc-field">
+                <label>Salaire brut mensuel moyen</label>
+                <div class="field-hint">Moyenne belge : 3 650€ brut/mois</div>
+                <div class="range-val" id="sal-val">3 650<span style="font-size:1.2rem">€</span></div>
+                <div class="range-unit">brut / collaborateur / mois</div>
+                <input type="range" id="sal" min="2000" max="7000" step="50" value="3650" oninput="updateCalc()">
+            </div>
+            <div class="calc-field">
+                <label>Part d'arrêts longs (&gt;30 jours)</label>
+                <div class="field-hint">Proportion des absences de longue durée</div>
+                <div class="range-val" id="long-val">35<span style="font-size:1.2rem">%</span></div>
+                <div class="range-unit">des absences sont des arrêts longs</div>
+                <input type="range" id="long" min="10" max="70" step="5" value="35" oninput="updateCalc()">
+            </div>
+        </div>
+
+        <div class="calc-result reveal d3">
+            <div class="calc-result-grid">
+                <div class="calc-res-block">
+                    <div class="calc-res-label">Coût direct estimé / an</div>
+                    <div class="calc-res-val" id="res-direct">—</div>
+                    <div class="calc-res-sub">Salaires maintenus + remplacements</div>
+                </div>
+                <div class="calc-res-block">
+                    <div class="calc-res-label">Surcoût loi 2026 / an</div>
+                    <div class="calc-res-val" id="res-loi">—</div>
+                    <div class="calc-res-sub">30% indemnités mois 2 et 3 (arrêts &gt;30j)</div>
+                </div>
+                <div class="calc-res-block highlight">
+                    <div class="calc-res-label">Coût total estimé / an</div>
+                    <div class="calc-res-val" id="res-total">—</div>
+                    <div class="calc-res-sub">Impact réel sur votre bilan</div>
+                </div>
+            </div>
+
+            <div class="calc-roi-bar">
+                <div class="calc-roi-bar-label">
+                    <span>Investissement Momentum 180 (3 000€)</span>
+                    <span id="res-roi-pct">—</span>
+                </div>
+                <div class="calc-roi-track">
+                    <div class="calc-roi-fill" id="roi-fill"></div>
+                </div>
+            </div>
+
+            <div class="calc-verdict" id="res-verdict">
+                Ajustez les curseurs pour voir votre situation.
+            </div>
+
+            <div class="calc-cta">
+                <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank">
+                    → Discuter de ces chiffres — 15 min
+                </a>
+                <div class="calc-cta-note">
+                    Je vous dis si une réduction de 20% est réaliste pour votre organisation.<br>
+                    Pas un pitch — un diagnostic honnête.
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -954,32 +1148,45 @@
     <div class="problem-inner">
         <div class="section-label reveal">
             <div class="section-label-line"></div>
-            <div class="section-label-text">Ce qui ne fonctionne pas</div>
+            <div class="section-label-text">Le mécanisme que personne ne voit</div>
         </div>
         <h2 class="reveal d1">
-            On installe un babyfoot<br>et on s'étonne que les gens <em>démissionnent encore.</em>
+            La fatigue quotidienne ne disparaît pas.<br>Elle <em>s'accumule — jusqu'à l'arrêt.</em>
         </h2>
         <p class="problem-story reveal d1">
-            "Super journée de team building en septembre. Deux mois plus tard, l'ambiance était exactement la même. On a dépensé 4 000€ pour un souvenir."
+            Les équipes sédentaires savent ce qu'elles devraient faire. Faire des pauses. Structurer leur journée. Bouger. Le problème, ce n'est pas la connaissance — c'est que le cadre de travail les empêche de l'appliquer.
         </p>
         <p class="problem-body reveal d2">
-            Les approches classiques partagent un point commun : elles se déroulent <strong>en dehors du travail réel.</strong> Un jour de séminaire ne change pas une habitude. Une conférence sur le bien-être n'ancre rien dans les workflows. Et quand le consultant repart, tout s'évapore en 6 semaines.
+            Un arrêt longue durée ne tombe pas du ciel. Il se construit en silence, par deux chaînes que le quotidien entretient sans que personne ne les voit.
         </p>
+
+        <div class="problem-chains reveal d2">
+            <div class="chain">
+                <div class="chain-label">Chaîne 1 — Corps</div>
+                <div class="chain-text"><strong>Sédentarité prolongée</strong> → tensions chroniques (dos, nuque, poignets) → douleurs → arrêts courts qui s'allongent.</div>
+            </div>
+            <div class="chain">
+                <div class="chain-label">Chaîne 2 — Cognition</div>
+                <div class="chain-text"><strong>Surcharge cognitive sans récupération</strong> → épuisement cumulé → désengagement → burn-out → arrêt longue durée.</div>
+            </div>
+        </div>
+
         <p class="problem-body reveal d2">
-            La culture se construit dans les micro-moments du quotidien — le lundi matin, la réunion de 9h, la pause de 15h. Pas dans une salle de séminaire.
+            Les approches classiques ne cassent aucune des deux chaînes — parce qu'elles se déroulent <strong>en dehors du travail réel.</strong>
         </p>
+
         <div class="problem-traps reveal d3">
             <div class="trap">
                 <div class="trap-x">✗</div>
-                <div class="trap-text"><strong>Team buildings événementiels</strong> — bonne humeur 48h, zéro changement structurel</div>
+                <div class="trap-text"><strong>Team buildings événementiels</strong> — bonne humeur 48h, zéro changement dans les routines quotidiennes</div>
             </div>
             <div class="trap">
                 <div class="trap-x">✗</div>
-                <div class="trap-text"><strong>Séminaires bien-être ponctuels</strong> — le consultant part, la culture reste identique</div>
+                <div class="trap-text"><strong>Séminaires ponctuels</strong> — le consultant part, les habitudes restent identiques</div>
             </div>
             <div class="trap">
                 <div class="trap-x">✗</div>
-                <div class="trap-text"><strong>Avantages en nature</strong> — frigo à smoothies, salle de sport : cosmétique</div>
+                <div class="trap-text"><strong>Avantages en nature</strong> — babyfoot, corbeille de fruits : visible, mais cosmétique</div>
             </div>
             <div class="trap">
                 <div class="trap-x">✗</div>
@@ -989,35 +1196,13 @@
     </div>
 </section>
 
-<!-- ═══ MÉCANISME ════════════════════════════════ -->
-<section style="padding:4rem 6%; background:rgba(27,54,93,0.03); border-top:1px solid rgba(27,54,93,0.06); border-bottom:1px solid rgba(27,54,93,0.06);">
-    <div style="max-width:820px; margin:0 auto;" class="reveal">
-        <div class="section-label">
-            <div class="section-label-line"></div>
-            <div class="section-label-text">Le mécanisme invisible</div>
-        </div>
-        <h2 style="font-family:var(--serif); font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:1.5rem;">Comment un arrêt longue durée <em style="font-style:italic; color:var(--coral);">se construit en silence.</em></h2>
-        <div class="mechanism-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2rem;">
-            <div style="background:#fff; border:1px solid rgba(27,54,93,0.08); border-radius:10px; padding:1.5rem;">
-                <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--coral); margin-bottom:0.6rem;">Chaîne physique</div>
-                <p style="font-size:0.88rem; color:#3d4f6b; line-height:1.7;">Sédentarité prolongée → tensions chroniques (dos, nuque, poignets) → douleurs → arrêts courts qui s'allongent.</p>
-            </div>
-            <div style="background:#fff; border:1px solid rgba(27,54,93,0.08); border-radius:10px; padding:1.5rem;">
-                <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--coral); margin-bottom:0.6rem;">Chaîne cognitive</div>
-                <p style="font-size:0.88rem; color:#3d4f6b; line-height:1.7;">Surcharge sans récupération → épuisement cumulé → désengagement → burn-out → arrêt longue durée.</p>
-            </div>
-        </div>
-        <p style="font-size:0.97rem; color:var(--navy); font-weight:600; text-align:center; line-height:1.6;">Les 4 routines ci-dessous cassent ces deux chaînes au quotidien — avant que la fatigue ne devienne un dossier médical.</p>
-    </div>
-</section>
-
 <!-- ═══ MÉTHODE ═══════════════════════════════════ -->
 <section class="method">
     <div class="method-inner">
         <div class="method-header reveal">
-            <div class="method-eyebrow">La méthode Équilibre Performance</div>
+            <div class="method-eyebrow">Momentum 180</div>
             <h2>4 routines. <em>Dans vos workflows.</em><br>Pas en dehors.</h2>
-            <p class="method-sub">Intégrées dans vos agendas, vos outils, votre organisation existante. Zéro disruption, impact mesurable.</p>
+            <p class="method-sub">40 minutes par jour. 5% du temps de travail. Dans vos agendas — pas en dehors.</p>
         </div>
 
         <div class="rituals">
@@ -1026,31 +1211,33 @@
                 <div>
                     <div class="ritual-tag">10 min · Chaque matin</div>
                     <h4>Démarrage synchronisé</h4>
-                    <p>Inspiré du Radio Taiso, pratiqué chez Toyota depuis 70 ans. 27 millions de Japonais au moins 2 fois par semaine. Mobilisation adaptée bureau — pas de tenue de sport, pas de performance. Crée une cohésion immédiate dès le Jour 1.</p>
+                    <p>Casse la sédentarité dès 9h. Mobilisation adaptée bureau — pas de tenue de sport, pas de performance. Crée un moment de cohésion quotidien. Inspiré du Radio Taiso pratiqué chez Toyota depuis +70 ans : <strong>27 millions de Japonais 2×/semaine.</strong> Zéro organisation belge ne l'utilise encore.</p>
                 </div>
             </div>
             <div class="ritual reveal d1">
                 <div class="ritual-icon">⏸️</div>
                 <div>
                     <div class="ritual-tag">10 min · 4× par jour</div>
-                    <h4>Pauses de concentration (cycles 90 min)</h4>
-                    <p>Le cerveau fonctionne par cycles ultradiens de 90 minutes. Ignorer ces cycles coûte de la productivité. Les respecter avec mobilisation ciblée et respiration guidée : +15 à 18% de concentration mesurée.</p>
+                    <h4>Pauses de concentration</h4>
+                    <p>Le cerveau fonctionne par cycles ultradiens de 90 minutes. Le forcer au-delà détruit la productivité. Mobilisation ciblée pour les tensions posturales et récupération cognitive : <strong>+15 à 18% de concentration mesurée.</strong></p>
+                    <p style="margin-top:0.5rem; font-size:0.78rem; opacity:0.6;">Kleitman / INRS — cycles ultradiens</p>
                 </div>
             </div>
             <div class="ritual reveal d2">
                 <div class="ritual-icon">📅</div>
                 <div>
-                    <div class="ritual-tag">Formation 2h · Par service</div>
+                    <div class="ritual-tag">Formation 2h par service · Max 20 personnes</div>
                     <h4>Time Blocking</h4>
-                    <p>Formation pratique avec intégration directe dans vos calendriers Outlook, Teams ou Google. Casse la fragmentation des tâches — première source de fatigue mentale en bureau. Résultat cible : 4 à 5 heures de productivité récupérées par collaborateur, par semaine.</p>
+                    <p>Casse la fragmentation des tâches — première source de fatigue mentale en bureau. Intégration directe dans Outlook, Teams ou Google. <strong>4 à 5h de productivité réelle récupérées par collaborateur par semaine.</strong></p>
+                    <p style="margin-top:0.5rem; font-size:0.78rem; opacity:0.6;">Résultat observé en environnement corporate</p>
                 </div>
             </div>
             <div class="ritual reveal d3">
                 <div class="ritual-icon">🤝</div>
                 <div>
-                    <div class="ritual-tag">6 mois · Suivi inclus</div>
+                    <div class="ritual-tag">Min. 2 par service · Autonomie à J+180</div>
                     <h4>Ambassadeurs internes</h4>
-                    <p>Je forme 2 relais dans votre équipe. Ce sont eux qui pilotent les routines après mon départ. Pas de dépendance consultante, pas de rechute. La culture devient autonome — c'est l'objectif.</p>
+                    <p>Casse la dépendance au consultant. Vos propres équipes pilotent le système après mon départ. La méthode reste — pas de rechute à 6 semaines. <strong>Autonomie mesurée à J+180.</strong></p>
                 </div>
             </div>
         </div>
@@ -1059,41 +1246,41 @@
             <div class="phase">
                 <div class="phase-badge">S0</div>
                 <div class="phase-content">
-                    <div class="phase-when">1 journée · Cadrage</div>
-                    <div class="phase-name">Diagnostic & co-construction</div>
-                    <div class="phase-desc">Rencontre dirigeants, managers et décideurs. Identification des ambassadeurs (min. 2 par service). Co-construction des routines adaptées à votre culture. Mesure de base.</div>
+                    <div class="phase-when">1 journée sur site</div>
+                    <div class="phase-name">Cadrage</div>
+                    <div class="phase-desc">Rencontre avec dirigeants, managers et décideurs. Définition de la marche à suivre. Identification des ambassadeurs (minimum 2 par service). Co-construction des routines adaptées à votre culture.</div>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-badge">S1</div>
                 <div class="phase-content">
-                    <div class="phase-when">Journées complètes · Immersion</div>
-                    <div class="phase-name">Présence sur site toute la journée</div>
-                    <div class="phase-desc">Les équipes s'habituent à Marjorie. Implémentation progressive des routines dans les workflows quotidiens. Conseil et ajustements en temps réel.</div>
+                    <div class="phase-when">Journées complètes sur site</div>
+                    <div class="phase-name">Immersion</div>
+                    <div class="phase-desc">Présence sur site toute la journée. Les équipes s'habituent à Marjorie. Implémentation progressive des routines dans les workflows. Conseil et ajustements en temps réel.</div>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-badge">S2</div>
                 <div class="phase-content">
-                    <div class="phase-when">Min. 4h/jour · Formation</div>
-                    <div class="phase-name">Time blocking par service</div>
-                    <div class="phase-desc">Formation 2h par service, max 20 personnes, réparti sur la semaine. Maintien des routines quotidiennes. Accompagnement terrain.</div>
+                    <div class="phase-when">Min. 4h/jour sur site</div>
+                    <div class="phase-name">Formation</div>
+                    <div class="phase-desc">Time blocking : 2h par service, max 20 personnes, réparti sur la semaine. Maintien des routines quotidiennes. Accompagnement terrain.</div>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-badge">S3</div>
                 <div class="phase-content">
-                    <div class="phase-when">4h/jour · Finalisation</div>
-                    <div class="phase-name">Passage de relais aux ambassadeurs</div>
-                    <div class="phase-desc">Vérification de l'implémentation. Formation finale ambassadeurs. Organisation du suivi sur 6 mois.</div>
+                    <div class="phase-when">4h/jour sur site</div>
+                    <div class="phase-name">Finalisation</div>
+                    <div class="phase-desc">Vérification de l'implémentation. Passage de relais complet aux ambassadeurs. Organisation du suivi sur 6 mois.</div>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-badge">M1–6</div>
                 <div class="phase-content">
-                    <div class="phase-when">6 mois · Check-ins mensuels</div>
-                    <div class="phase-name">Consolidation par les ambassadeurs</div>
-                    <div class="phase-desc">Rapport ambassadeurs 1×/mois. Recadrage à distance si nécessaire. Rapport final complet avec données avant/après à J+180.</div>
+                    <div class="phase-when">6 mois · À distance (+ sur site si nécessaire)</div>
+                    <div class="phase-name">Autonomie &amp; consolidation</div>
+                    <div class="phase-desc">Rapport succinct des ambassadeurs 1×/mois. Recadrage à distance. Récolte des métriques et témoignages à J+180. Le rapport d'impact est un document de pilotage partageable en interne — pas une impression.</div>
                 </div>
             </div>
         </div>
@@ -1108,203 +1295,48 @@
                 <div class="section-label-line"></div>
                 <div class="section-label-text">Impact financier</div>
             </div>
-            <h2>1 500€ investis.<br><em>ROI concret en 6 mois.</em></h2>
-            <p class="roi-sub">Calcul basé sur une cible de réduction de 20% de l'absentéisme — objectif réaliste sur 6 mois, pas une promesse.</p>
+            <h2>3 000€ investis.<br><em>Retour potentiel ×5 à ×10 en 6 mois.</em></h2>
+            <p class="roi-sub">Calcul basé sur une cible de réduction de 20% de l'absentéisme — objectif réaliste sur 6 mois. Pas une promesse contractuelle.</p>
         </div>
 
         <div class="roi-calc reveal d1">
-            <div class="roi-calc-tag">Pour une entreprise de 50 collaborateurs en Hainaut · SD Worx 2025 — 165 425 €/100 ETP</div>
+            <div class="roi-calc-tag">Pour une organisation de 50 collaborateurs en Hainaut · SD Worx 2025 · 165 425€/100 ETP</div>
             <div class="roi-equation">
                 <div class="roi-eq-block">
                     <div class="roi-eq-num">82 700€</div>
-                    <div class="roi-eq-label">Coût absentéisme actuel/an</div>
+                    <div class="roi-eq-label">Coût absentéisme estimé/an</div>
                 </div>
                 <div class="roi-eq-op">×</div>
                 <div class="roi-eq-block">
                     <div class="roi-eq-num">−20%</div>
-                    <div class="roi-eq-label">Cible de réduction</div>
+                    <div class="roi-eq-label">Cible de réduction à J+180</div>
                 </div>
                 <div class="roi-eq-op">=</div>
                 <div class="roi-eq-block result">
-                    <div class="roi-eq-num">16 500€</div>
+                    <div class="roi-eq-num">~16 500€</div>
                     <div class="roi-eq-label">Économies potentielles/an</div>
                 </div>
             </div>
-            <div class="roi-footnote">Investissement pilote : 1 500€ HTVA — soit un retour potentiel ×10 sur la cible de réduction d'absentéisme. Ce sont des cibles transparentes, pas des garanties contractuelles.</div>
+            <div class="roi-footnote">Investissement pilote : 3 000€ HTVA — retour potentiel ×5 à ×10. Ces cibles seront mesurées et documentées dans le rapport J+180. Utilisez le calculateur ci-dessus pour estimer votre situation précise.</div>
         </div>
 
         <div class="roi-extras reveal d2">
             <div class="roi-extra">
-                <div class="roi-extra-num">4–5h</div>
-                <div class="roi-extra-text">De productivité récupérées par semaine via time blocking</div>
-                <div class="roi-extra-src">Résultat observé en environnement corporate</div>
+                <div class="roi-extra-num">1 580€</div>
+                <div class="roi-extra-text">Coût direct de l'absentéisme par collaborateur par an</div>
+                <div class="roi-extra-src">SD Worx 2024</div>
+            </div>
+            <div class="roi-extra">
+                <div class="roi-extra-num">+4–5h</div>
+                <div class="roi-extra-text">De productivité réelle récupérées par semaine via time blocking</div>
+                <div class="roi-extra-src">Résultat observé · environnement corporate</div>
             </div>
             <div class="roi-extra">
                 <div class="roi-extra-num">+15–18%</div>
-                <div class="roi-extra-text">De concentration avec les pauses de cycles ultradiens</div>
-                <div class="roi-extra-src">Cycles Kleitman / INRS</div>
-            </div>
-            <div class="roi-extra">
-                <div class="roi-extra-num">+30%</div>
-                <div class="roi-extra-text">De cotisation solidarité à charge employeur depuis janvier 2026</div>
-                <div class="roi-extra-src">Loi fédérale · SD Worx · Le Soir</div>
+                <div class="roi-extra-text">De concentration mesurée avec les pauses de récupération cognitive</div>
+                <div class="roi-extra-src">INRS · cycles ultradiens (Kleitman)</div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- ═══ JOURNÉE TYPE ══════════════════════════════ -->
-<section class="dayschedule">
-    <div class="dayschedule-inner">
-        <div class="dayschedule-header reveal">
-            <div class="section-label">
-                <div class="section-label-line"></div>
-                <div class="section-label-text">La journée type</div>
-            </div>
-            <h2 class="dayschedule-title">40 minutes par jour.<br><em>Sur 8 heures de travail.</em></h2>
-            <p class="dayschedule-sub">Les 4 routines représentent 5 % du temps de travail. Le reste — 95 % — est du travail normal, structuré et non interrompu.</p>
-        </div>
-
-        <div class="timeline reveal d1">
-
-            <!-- 9h00 -->
-            <div class="tl-row ritual-row">
-                <div class="tl-time">9h00</div>
-                <div class="tl-dot dot-ritual"></div>
-                <div class="tl-content ritual-block">
-                    <div class="tl-tag">Rituel · 10 min</div>
-                    <div class="tl-name">Démarrage synchronisé</div>
-                    <div class="tl-desc">Démarrage collectif. Mobilisation douce guidée, toute l'équipe ensemble. Corps activé, équipe synchronisée pour la journée.</div>
-                </div>
-                <div class="tl-badge badge-ritual">10 min</div>
-            </div>
-
-            <!-- 9h10 → 10h30 -->
-            <div class="tl-row work-row">
-                <div class="tl-time">9h10 – 10h30</div>
-                <div class="tl-dot dot-work"></div>
-                <div class="tl-content work-block">
-                    <div class="tl-name-work">Travail profond</div>
-                    <div class="tl-desc-work">Bloc de concentration non interrompu — time blocking activé</div>
-                </div>
-                <div class="tl-badge badge-work">80 min</div>
-            </div>
-
-            <!-- 10h30 -->
-            <div class="tl-row ritual-row">
-                <div class="tl-time">10h30</div>
-                <div class="tl-dot dot-ritual"></div>
-                <div class="tl-content ritual-block">
-                    <div class="tl-tag">Rituel · 10 min</div>
-                    <div class="tl-name">Pause ultradian #1</div>
-                    <div class="tl-desc">Étirements ciblés (poignets, nuque, dos). Respiration guidée. Déconnexion brève. Tensions articulaires relâchées, concentration rechargée.</div>
-                </div>
-                <div class="tl-badge badge-ritual">10 min</div>
-            </div>
-
-            <!-- 10h40 → 12h00 -->
-            <div class="tl-row work-row">
-                <div class="tl-time">10h40 – 12h00</div>
-                <div class="tl-dot dot-work"></div>
-                <div class="tl-content work-block">
-                    <div class="tl-name-work">Travail profond</div>
-                    <div class="tl-desc-work">Bloc de concentration ou réunions structurées</div>
-                </div>
-                <div class="tl-badge badge-work">80 min</div>
-            </div>
-
-            <!-- 12h00 → 13h00 -->
-            <div class="tl-row pause-row">
-                <div class="tl-time">12h00 – 13h00</div>
-                <div class="tl-dot dot-pause"></div>
-                <div class="tl-content pause-block">
-                    <div class="tl-name-pause">Pause déjeuner</div>
-                    <div class="tl-desc-pause">Pause naturelle — compte comme cycle ultradian. Aucun rituel ajouté.</div>
-                </div>
-                <div class="tl-badge badge-pause">60 min</div>
-            </div>
-
-            <!-- 13h00 → 15h00 -->
-            <div class="tl-row work-row">
-                <div class="tl-time">13h00 – 15h00</div>
-                <div class="tl-dot dot-work"></div>
-                <div class="tl-content work-block">
-                    <div class="tl-name-work">Travail profond</div>
-                    <div class="tl-desc-work">Bloc de l'après-midi — le plus difficile sans structure</div>
-                </div>
-                <div class="tl-badge badge-work">120 min</div>
-            </div>
-
-            <!-- 15h00 -->
-            <div class="tl-row ritual-row">
-                <div class="tl-time">15h00</div>
-                <div class="tl-dot dot-ritual"></div>
-                <div class="tl-content ritual-block">
-                    <div class="tl-tag">Rituel · 10 min</div>
-                    <div class="tl-name">Pause ultradian #2</div>
-                    <div class="tl-desc">Mobilisation articulaire debout. Technique de récupération attentionnelle. Évite l'effondrement cognitif de l'après-midi.</div>
-                </div>
-                <div class="tl-badge badge-ritual">10 min</div>
-            </div>
-
-            <!-- 15h10 → 16h30 -->
-            <div class="tl-row work-row">
-                <div class="tl-time">15h10 – 16h30</div>
-                <div class="tl-dot dot-work"></div>
-                <div class="tl-content work-block">
-                    <div class="tl-name-work">Travail structuré</div>
-                    <div class="tl-desc-work">Tâches administratives, suivi, communication</div>
-                </div>
-                <div class="tl-badge badge-work">80 min</div>
-            </div>
-
-            <!-- 16h30 -->
-            <div class="tl-row ritual-row">
-                <div class="tl-time">16h30</div>
-                <div class="tl-dot dot-ritual"></div>
-                <div class="tl-content ritual-block">
-                    <div class="tl-tag">Rituel · 10 min</div>
-                    <div class="tl-name">Pause ultradian #3</div>
-                    <div class="tl-desc">Étirements finaux. Clôture cognitive de la journée. Récupération articulaire en fin de session.</div>
-                </div>
-                <div class="tl-badge badge-ritual">10 min</div>
-            </div>
-
-            <!-- 16h40 → 17h00 -->
-            <div class="tl-row work-row" style="--no-line:1">
-                <div class="tl-time">16h40 – 17h00</div>
-                <div class="tl-dot dot-work"></div>
-                <div class="tl-content work-block">
-                    <div class="tl-name-work">Clôture & planification J+1</div>
-                    <div class="tl-desc-work">Revue des tâches, time blocking du lendemain</div>
-                </div>
-                <div class="tl-badge badge-work">20 min</div>
-            </div>
-        </div>
-
-        <!-- Totaux -->
-        <div class="tl-totals reveal d2">
-            <div class="tl-total-block total-ritual">
-                <div class="total-num">40 min</div>
-                <div class="total-label">Routines actives par jour</div>
-                <div class="total-sub">4 routines · 5 % du temps de travail</div>
-            </div>
-            <div class="tl-total-sep">vs</div>
-            <div class="tl-total-block total-work">
-                <div class="total-num">7h20</div>
-                <div class="total-label">Travail normal</div>
-                <div class="total-sub">Concentration, réunions, tâches</div>
-            </div>
-            <div class="tl-total-sep">→</div>
-            <div class="tl-total-block total-gain">
-                <div class="total-num">4–5h</div>
-                <div class="total-label">Productivité récupérée</div>
-                <div class="total-sub">Par semaine · via time blocking</div>
-            </div>
-        </div>
-
-        <p class="tl-note reveal d3">Les horaires sont indicatifs et s'adaptent à votre organisation. Le principe non négociable : 90 minutes de travail maximum entre chaque pause.</p>
-
     </div>
 </section>
 
@@ -1322,7 +1354,7 @@
                     <tr>
                         <th>Critère</th>
                         <th>Approches classiques</th>
-                        <th>Équilibre Performance</th>
+                        <th>Momentum 180</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1334,7 +1366,7 @@
                     <tr>
                         <td>Ancrage après départ</td>
                         <td><span class="badge badge-no">Aucun</span></td>
-                        <td><span class="badge badge-yes">2 ambassadeurs formés</span></td>
+                        <td><span class="badge badge-yes">Ambassadeurs formés par service</span></td>
                     </tr>
                     <tr>
                         <td>Intégration workflows</td>
@@ -1344,12 +1376,7 @@
                     <tr>
                         <td>Mesure avant / après</td>
                         <td><span class="badge badge-no">Rarement</span></td>
-                        <td><span class="badge badge-yes">Données J1 → J180</span></td>
-                    </tr>
-                    <tr>
-                        <td>Risque financier</td>
-                        <td><span class="badge badge-no">Budget engagé sans filet</span></td>
-                        <td><span class="badge badge-yes">Sortie Jour 3, 50% remboursé</span></td>
+                        <td><span class="badge badge-yes">Rapport J+21 et J+180</span></td>
                     </tr>
                     <tr>
                         <td>Effet dans le temps</td>
@@ -1359,36 +1386,10 @@
                     <tr>
                         <td>Dépendance consultante</td>
                         <td><span class="badge badge-no">Souvent, pour renouveler</span></td>
-                        <td><span class="badge badge-yes">Zéro — vous êtes autonomes</span></td>
+                        <td><span class="badge badge-yes">Zéro — vos équipes pilotent</span></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-</section>
-
-<!-- ═══ OBJECTIONS ════════════════════════════════ -->
-<section style="padding:6rem 6%;">
-    <div style="max-width:820px; margin:0 auto;">
-        <div class="section-label reveal">
-            <div class="section-label-line"></div>
-            <div class="section-label-text">Vos questions légitimes</div>
-        </div>
-        <h2 style="font-family:var(--serif); font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:2.5rem;" class="reveal d1">Ce que vous pensez — <em style="font-style:italic; color:var(--coral);">et la réponse honnête.</em></h2>
-
-        <div style="display:grid; gap:1.5rem;" class="reveal d2">
-            <div style="background:#fff; border:1px solid rgba(27,54,93,0.08); border-radius:10px; padding:1.8rem;">
-                <div style="font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--navy); font-weight:600; margin-bottom:0.8rem;">« Mes équipes vont résister. »</div>
-                <p style="font-size:0.92rem; color:#3d4f6b; line-height:1.75;">Pas de tenue de sport, pas de performance physique. La Semaine 0 calibre tout à votre culture. Le démarrage synchronisé reprend un principe utilisé dans les bureaux de Toyota depuis 70 ans — pas de la gym.</p>
-            </div>
-            <div style="background:#fff; border:1px solid rgba(27,54,93,0.08); border-radius:10px; padding:1.8rem;">
-                <div style="font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--navy); font-weight:600; margin-bottom:0.8rem;">« On a déjà investi dans du team building, ça n'a rien changé. »</div>
-                <p style="font-size:0.92rem; color:#3d4f6b; line-height:1.75;">Normal : un événement ponctuel ne crée pas d'habitude. Ici, c'est 4 semaines dans vos workflows quotidiens + des ambassadeurs formés dans chaque service pour maintenir le système après mon départ.</p>
-            </div>
-            <div style="background:#fff; border:1px solid rgba(27,54,93,0.08); border-radius:10px; padding:1.8rem;">
-                <div style="font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--navy); font-weight:600; margin-bottom:0.8rem;">« Il n'y a pas de preuve que ça marche chez nous. »</div>
-                <p style="font-size:0.92rem; color:#3d4f6b; line-height:1.75;">C'est le principe du pilote : 1 500 € avec garantie Jour 3. Si après 3 jours ça ne convient pas, 50% remboursé, vous gardez tout. Les chiffres J+180 parleront.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -1397,36 +1398,29 @@
 <section class="pricing">
     <div class="pricing-inner">
         <div class="pricing-eyebrow reveal">Offre pilote 2026</div>
-        <h2 class="reveal d1">Tout inclus.<br><em>Zéro risque.</em></h2>
-        <p class="pricing-sub reveal d2">2 organisations partenaires uniquement. Accès réservé aux entreprises validées lors du diagnostic gratuit.</p>
+        <h2 class="reveal d1">Tout inclus.<br><em>2 organisations partenaires.</em></h2>
+        <p class="pricing-sub reveal d2">Je sélectionne les structures où la méthode a le plus de chances de produire des résultats mesurables. On le voit ensemble en 15 minutes.</p>
 
         <div class="pricing-card reveal d2">
             <div class="pricing-badge">Pilote · 2 places · 2026</div>
-            <div class="price" style="font-size:4rem;">1 500<sup style="font-size:0.35em;vertical-align:super;opacity:0.5;font-weight:400;">€</sup></div>
-            <div class="price-detail">HTVA · Par entreprise · Tout inclus · Aucun frais caché</div>
-            <div style="display:inline-block; background:rgba(224,122,95,0.08); border:1px solid rgba(224,122,95,0.2); border-radius:6px; padding:0.5rem 1rem; margin-bottom:1rem; font-size:0.82rem; color:#c9634a;">Tarif standard post-pilote : à partir de 6 000€</div>
-            <div style="background:rgba(27,54,93,0.03); border:1px solid rgba(27,54,93,0.07); border-radius:8px; padding:1rem 1.2rem; margin-bottom:1.5rem; text-align:left;">
-                <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#8a9ab5; margin-bottom:0.6rem;">Pourquoi un pilote — et ce qu'on demande</div>
-                <div style="font-size:0.83rem; color:#3d4f6b; line-height:1.7;">Vous co-construisez les premiers résultats en Belgique. Les données à J+180 définiront le programme standard. En échange : accès direct aux équipes · participation active de la direction · feedback structuré · témoignage en fin de mission.</div>
-            </div>
+            <div class="price-anchor">Tarif standard post-pilote : à partir de 6 000€</div>
+            <div class="price"><sup>€</sup>3 000</div>
+            <div class="price-detail">HTVA · Par organisation · Tout inclus · Aucun frais caché</div>
             <div class="price-items">
-                <div class="price-item"><span class="price-check">✓</span> Cadrage avec dirigeants (1 journée)</div>
-                <div class="price-item"><span class="price-check">✓</span> 3 semaines intensives sur site</div>
-                <div class="price-item"><span class="price-check">✓</span> Formation 2 ambassadeurs internes</div>
-                <div class="price-item"><span class="price-check">✓</span> Formations time blocking par service</div>
-                <div class="price-item"><span class="price-check">✓</span> Tous outils, templates & supports</div>
-                <div class="price-item"><span class="price-check">✓</span> 6 mois de suivi + rapport d'impact</div>
+                <div class="price-item"><span class="price-check">✓</span> Cadrage avec dirigeants et managers (1 journée)</div>
+                <div class="price-item"><span class="price-check">✓</span> 4 semaines sur site (immersion, formation, finalisation)</div>
+                <div class="price-item"><span class="price-check">✓</span> Formations time blocking par service (max 20 pers.)</div>
+                <div class="price-item"><span class="price-check">✓</span> Formation ambassadeurs internes (min. 2 par service)</div>
+                <div class="price-item"><span class="price-check">✓</span> Tous outils, templates &amp; supports</div>
+                <div class="price-item"><span class="price-check">✓</span> 6 mois de suivi + rapports J+21 et J+180</div>
             </div>
             <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-book">
-                → Postuler pour le pilote — Diagnostic gratuit
+                → Réserver un diagnostic — 15 minutes
             </a>
-            <p class="book-note">15 minutes · Zéro engagement · Je vous dis franchement si ça correspond</p>
-            <div class="guarantee">
-                <div class="guarantee-icon">🛡️</div>
-                <div>
-                    <div class="guarantee-title">Garantie Jour 3 — Risque zéro</div>
-                    <div class="guarantee-text">Après 3 jours, si la méthode ne convient pas à votre organisation : vous résiliez. 50% remboursé immédiatement. Vous conservez tous les outils, formations et supports reçus. Aucune question posée.</div>
-                </div>
+            <p class="book-note">Zéro engagement · Garantie Jour 3 : 50% remboursé si ça ne correspond pas — vous gardez tous les outils</p>
+            <div class="counterparts">
+                <div class="counterparts-title">Ce que je demande en contrepartie</div>
+                <div class="counterparts-text">Accès direct aux équipes · Participation active de la direction · Feedback structuré au fil du programme · Accès aux métriques pour les rapports J+21 et J+180 · Témoignage écrit ou vidéo en fin de mission.</div>
             </div>
         </div>
     </div>
@@ -1439,18 +1433,44 @@
         <div class="reveal d1">
             <div class="about-eyebrow">Marjorie Mathieu</div>
             <h3>Je ne théorise pas.<br>Je <em>m'immerge.</em></h3>
-            <p>15 ans dans des environnements corporate exigeants — BNP Paribas, Serco Europe, CEPI Brussels, KONE, STIB — m'ont appris une chose : les séminaires s'oublient, les habitudes restent. C'est pour ça que je ne fais pas de conférences. Je viens dans vos bureaux, je forme vos équipes, et je construis avec vous une culture qui tient.</p>
-            <p>Mon approche combine rigueur opérationnelle et 14 ans de pratique des techniques de régulation physique et cognitive — appliquées ici comme outils opérationnels. Du concret intégré dans vos outils existants, pas de la théorie sur slides. Des résultats mesurables, avec données avant/après transparentes.</p>
+            <p>15 ans dans des environnements corporate sédentaires — BNP Paribas, Serco Europe, CEPI Brussels, KONE, STIB. J'ai observé de l'intérieur comment l'absence de routines quotidiennes détruit l'engagement des équipes. Les séminaires s'oublient. Les habitudes restent.</p>
+            <p>14 ans de pratique et d'enseignement des techniques de régulation physique et cognitive — appliquées comme outils opérationnels, pas comme philosophie personnelle. Créatrice de Momentum 180 (2026). Approche 100% data-driven : les rapports J+21 et J+180 sont des documents de pilotage, pas des impressions.</p>
             <div class="about-tags">
-                <span class="about-tag">BNP Paribas · Serco · CEPI · KONE · STIB</span>
+                <span class="about-tag">BNP Paribas · Serco · CEPI Brussels · KONE · STIB</span>
                 <span class="about-tag">15 ans corporate</span>
-                <span class="about-tag">14 ans régulation physique & cognitive</span>
-                <span class="about-tag">Méthode Horizon Impact (2026)</span>
+                <span class="about-tag">14 ans de pratique des routines opérationnelles</span>
                 <span class="about-tag">Smart Coop · Ath, Hainaut</span>
             </div>
-            <a href="https://www.linkedin.com/in/equilibreperformance/" target="_blank" class="about-link">
+            <a href="https://www.linkedin.com/in/momentum180/" target="_blank" class="about-link">
                 Mon parcours complet sur LinkedIn →
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ OBJECTIONS ════════════════════════════════ -->
+<section class="objections">
+    <div class="objections-inner">
+        <h2 class="reveal">Vos questions légitimes.</h2>
+
+        <div class="objection reveal d1">
+            <div class="objection-q">« Mes équipes vont résister. »</div>
+            <div class="objection-a">Pas de tenue de sport, pas de performance physique. La Semaine 0 calibre tout à votre culture. Le démarrage synchronisé reprend un principe utilisé dans les bureaux de Toyota depuis 70 ans — <strong>pas de la gym.</strong></div>
+        </div>
+
+        <div class="objection reveal d1">
+            <div class="objection-q">« On a déjà investi dans du team building, ça n'a rien changé. »</div>
+            <div class="objection-a">Normal : un événement ponctuel ne crée pas d'habitude. Ici, c'est <strong>4 semaines dans vos workflows quotidiens</strong> + des ambassadeurs formés dans chaque service pour maintenir le système après mon départ.</div>
+        </div>
+
+        <div class="objection reveal d2">
+            <div class="objection-q">« Il n'y a pas de preuve que ça marche chez nous. »</div>
+            <div class="objection-a">C'est le principe du pilote. <strong>3 000€ pour co-construire les premiers résultats belges.</strong> Les chiffres J+180 parleront — c'est pour ça que les métriques font partie des contreparties attendues. Et si après 3 jours ça ne colle pas : 50% remboursé, vous gardez tous les outils.</div>
+        </div>
+
+        <div class="objection reveal d2">
+            <div class="objection-q">« Qu'est-ce qui se passe quand vous partez ? »</div>
+            <div class="objection-a">Rien ne s'évapore — c'est le point central. Les ambassadeurs internes pilotent le système. Les routines sont dans les agendas. Les outils sont dans vos fichiers. <strong>La méthode reste parce qu'elle est dans vos workflows, pas dans ma tête.</strong></div>
         </div>
     </div>
 </section>
@@ -1460,44 +1480,107 @@
     <div class="finale-inner">
         <span class="finale-ornament reveal">"</span>
         <h2 class="reveal d1">
-            La culture ne se décrète pas.<br>Elle se <em>pratique, chaque matin.</em>
+            Personne n'a conçu la journée de travail.<br>
+            <em>Il suffit de peu pour que tout change.</em>
         </h2>
         <p class="finale-sub reveal d2">
-            15 minutes pour voir si votre organisation est prête. Je vous dis franchement ce que j'observe — et si le pilote a du sens pour vous. Sans argumentaire de vente. Sans engagement.
+            15 minutes pour voir si votre organisation correspond au profil. Pas un pitch. Un diagnostic honnête — je vous dis ce que j'observe et si le pilote a du sens pour vous.
         </p>
         <div class="finale-sep reveal"></div>
         <div class="finale-spots reveal">
             <div class="f-spot open"></div>
             <div class="f-spot open"></div>
         </div>
-        <p class="finale-spots-txt reveal"><strong>2 places partenaires</strong> — Pilote 2026 · 1 500€ HTVA</p>
+        <p class="finale-spots-txt reveal"><strong>2 places partenaires</strong> — Pilote 2026 · 3 000€ HTVA</p>
         <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-finale reveal d2">
-            → Réserver mon diagnostic gratuit
+            → 15 minutes pour voir si ça correspond
         </a>
-        <p class="finale-note reveal d3">15 minutes · Zéro engagement · Diagnostic offert</p>
+        <p class="finale-note reveal d3">hello@marjoriemathieu.be · +32 477 09 18 03</p>
     </div>
 </section>
 
 <!-- ═══ FOOTER ════════════════════════════════════ -->
 <footer>
-    <div class="footer-brand">Marjorie Mathieu — Équilibre Performance</div>
+    <div class="footer-brand">Marjorie Mathieu — Momentum 180</div>
     <div class="footer-contact">
         <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a> · +32 477 09 18 03 · Ath, Hainaut — Belgique
     </div>
 </footer>
 
 <script>
-    // Scroll reveal
+    /* ── SCROLL REVEAL ── */
     const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-    // Nav shadow
     window.addEventListener('scroll', () => {
         document.getElementById('nav').style.boxShadow =
             window.scrollY > 50 ? '0 4px 20px rgba(27,54,93,0.1)' : 'none';
     });
+
+    /* ── CALCULATEUR ROI ── */
+    const PROGRAMME_COST = 3000;
+    const COUT_PAR_ETP_HAINAUT = 1654.25; // 165425 / 100
+
+    function fmt(n) {
+        return Math.round(n).toLocaleString('fr-BE') + '€';
+    }
+
+    function updateCalc() {
+        const etp   = parseFloat(document.getElementById('etp').value);
+        const taux  = parseFloat(document.getElementById('taux').value);
+        const sal   = parseFloat(document.getElementById('sal').value);
+        const longP = parseFloat(document.getElementById('long').value) / 100;
+
+        document.getElementById('etp-val').textContent  = Math.round(etp);
+        document.getElementById('taux-val').innerHTML   = taux.toFixed(1) + '<span style="font-size:1.2rem">%</span>';
+        document.getElementById('sal-val').innerHTML    = Math.round(sal).toLocaleString('fr-BE') + '<span style="font-size:1.2rem">€</span>';
+        document.getElementById('long-val').innerHTML   = Math.round(longP * 100) + '<span style="font-size:1.2rem">%</span>';
+
+        // Coût direct : base SD Worx ajustée à l'effectif et au taux réel vs moyenne belge (6.9%)
+        const tauxMoy = 6.9;
+        const coutBase = etp * COUT_PAR_ETP_HAINAUT;
+        const coutAjuste = coutBase * (taux / tauxMoy);
+
+        // Surcoût loi 2026 : arrêts longs (>30j) → employeur paie 30% indemnités mois 2 et 3
+        // Estimation : durée moyenne arrêt long = 90j → 2 mois indemnisés à 60% salaire brut
+        const nbArretLong = etp * (taux / 100) * longP;
+        const indemnitesMensuelle = sal * 0.60;
+        const surcoutLoi = nbArretLong * (indemnitesMensuelle * 2) * 0.30;
+
+        const total = coutAjuste + surcoutLoi;
+        const savings20 = total * 0.20;
+        const roi = savings20 / PROGRAMME_COST;
+        const roiPct = Math.min((PROGRAMME_COST / savings20) * 100, 100);
+
+        document.getElementById('res-direct').textContent = fmt(coutAjuste);
+        document.getElementById('res-loi').textContent    = fmt(surcoutLoi);
+        document.getElementById('res-total').textContent  = fmt(total);
+
+        const roiFill = document.getElementById('roi-fill');
+        const barPct  = Math.min((PROGRAMME_COST / savings20) * 100, 100);
+        roiFill.style.width = barPct.toFixed(1) + '%';
+
+        const roiX = (savings20 / PROGRAMME_COST).toFixed(1);
+        document.getElementById('res-roi-pct').textContent =
+            '= ' + barPct.toFixed(0) + "% de l\u2019\u00e9conomie \u00e0 J+180 si \u221220%";
+
+        let verdict = '';
+        if (savings20 <= 0 || !isFinite(savings20)) {
+            verdict = 'Ajustez les curseurs pour voir votre situation.';
+        } else if (roi >= 5) {
+            verdict = `Sur la base de vos paramètres, une réduction de 20% de l'absentéisme représente ${fmt(savings20)}/an — soit un retour de ×${roiX} sur l'investissement de ${fmt(PROGRAMME_COST)}. Pour ${Math.round(etp)} collaborateurs, le programme se rentabilise en moins de 3 mois.`;
+        } else if (roi >= 2) {
+            verdict = `Une réduction de 20% représente ${fmt(savings20)}/an pour votre organisation — soit ×${roiX} l'investissement. Le surcoût loi 2026 seul (${fmt(surcoutLoi)}/an) justifie une action préventive.`;
+        } else {
+            verdict = `Votre coût d'absentéisme estimé est de ${fmt(total)}/an. Une réduction de 20% = ${fmt(savings20)}/an. Discutons ensemble si Momentum 180 est le levier le plus adapté à votre situation.`;
+        }
+        document.getElementById('res-verdict').textContent = verdict;
+    }
+
+    // Init on load
+    updateCalc();
 </script>
 </body>
 </html>
