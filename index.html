@@ -8,9 +8,9 @@
     <meta name="google-site-verification" content="google34a5014abf925f22.html">
 
     <!-- SEO PRINCIPAL -->
-    <title>Reduire l absenteisme en PME - Momentum 180 - Hainaut et Wallonie</title>
+    <title>Reduire l absenteisme en entreprise - Momentum 180 - Hainaut et Wallonie</title>
     <meta name="description" content="Momentum 180 reduit les arrets de travail longs de 20% en 6 mois. 4 routines integrees dans vos workflows. Resultats mesures a J+180. Programme pilote 2026 - Hainaut et Wallonie.">
-    <meta name="keywords" content="absenteisme entreprise Belgique, reduire arrets maladie PME, burn-out prevention Hainaut, performance equipes sedentaires, consultant RH Wallonie, Momentum 180">
+    <meta name="keywords" content="absenteisme entreprise Belgique, reduire arrets maladie entreprise, burn-out prevention Hainaut, performance equipes sedentaires, consultant RH Wallonie, Momentum 180">
     <meta name="author" content="Marjorie Mathieu">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://marjoriemathieu.be">
@@ -23,14 +23,14 @@
     <!-- OPEN GRAPH LinkedIn / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://marjoriemathieu.be">
-    <meta property="og:title" content="Reduire l absenteisme en PME - Momentum 180 - Hainaut et Wallonie">
+    <meta property="og:title" content="Reduire l absenteisme en entreprise - Momentum 180 - Hainaut et Wallonie">
     <meta property="og:description" content="Momentum 180 reduit les arrets de travail longs de 20% en 6 mois. 4 routines dans vos workflows. Resultats mesures a J+180. Pilote 2026 - 2 organisations partenaires.">
     <meta property="og:locale" content="fr_BE">
     <meta property="og:site_name" content="Momentum 180 - Marjorie Mathieu">
 
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Reduire l absenteisme en PME - Momentum 180">
+    <meta name="twitter:title" content="Reduire l absenteisme en entreprise - Momentum 180">
     <meta name="twitter:description" content="4 routines integrees dans vos workflows. Resultats mesures a J+180. Pilote 2026 - Hainaut et Wallonie.">
 
     <!-- SCHEMA.ORG donnees structurees pour Google -->
@@ -39,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Momentum 180",
-      "description": "Programme de reduction de l absenteisme pour PME et grandes structures en Belgique. 4 routines integrees dans les workflows quotidiens. Resultats mesures a J+180.",
+      "description": "Programme de reduction de l absenteisme pour organisations et entreprises en Belgique. 4 routines integrees dans les workflows quotidiens. Resultats mesures a J+180.",
       "url": "https://marjoriemathieu.be",
       "telephone": "+32477091803",
       "email": "hello@marjoriemathieu.be",
@@ -127,6 +127,50 @@
             transition: all 0.3s;
         }
         .nav-cta:hover { background:#c9634a; transform:translateY(-1px); }
+
+        /* ── BOUTON FLOTTANT LINKEDIN ─────────── */
+        .float-linkedin {
+            position: fixed;
+            right: 1.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 190;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: var(--navy);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 6px 20px rgba(27,54,93,0.25);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .float-linkedin svg { width: 22px; height: 22px; fill: #fff; }
+        .float-linkedin:hover {
+            background: var(--coral);
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 8px 26px rgba(224,122,95,0.35);
+        }
+        .float-linkedin-tooltip {
+            position: absolute;
+            right: 58px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--navy);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 600;
+            white-space: nowrap;
+            padding: 0.5rem 0.9rem;
+            border-radius: 4px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s;
+        }
+        .float-linkedin:hover .float-linkedin-tooltip { opacity: 1; }
+        @media (max-width: 680px) {
+            .float-linkedin { right: 1rem; width: 42px; height: 42px; }
+            .float-linkedin svg { width: 19px; height: 19px; }
+            .float-linkedin-tooltip { display: none; }
+        }
 
         /* ── HERO ────────────────────────────── */
         .hero {
@@ -403,6 +447,20 @@
             margin-bottom: 1.5rem;
         }
         .calc-loi-banner strong { color: var(--coral); }
+
+        .calc-cap-banner {
+            background: rgba(27,54,93,0.05);
+            border: 1px solid rgba(27,54,93,0.15);
+            border-radius: 8px;
+            padding: 0.9rem 1.2rem;
+            font-size: 0.8rem;
+            color: #3d4f6b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+        .calc-cap-banner.visible { display: block; }
+        .calc-cap-banner strong { color: var(--navy); }
 
         .calc-result {
             background: var(--navy-dark);
@@ -1028,6 +1086,12 @@
     <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="nav-cta">Diagnostic — 15 min →</a>
 </nav>
 
+<!-- ═══ BOUTON FLOTTANT LINKEDIN ══════════════════ -->
+<a href="https://www.linkedin.com/in/momentum180/" target="_blank" class="float-linkedin" aria-label="Profil LinkedIn de Marjorie Mathieu">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    <span class="float-linkedin-tooltip">Voir mon profil LinkedIn</span>
+</a>
+
 <!-- ═══ HERO ══════════════════════════════════════ -->
 <section class="hero">
     <div class="hero-ornament">180</div>
@@ -1126,10 +1190,14 @@
             <strong>⚠ Loi fédérale du 1er janvier 2026 :</strong> Les employeurs de 50+ travailleurs paient désormais 30% des indemnités maladie des 2e et 3e mois d'incapacité. Ce calculateur intègre ce surcoût dans le total.
         </div>
 
+        <div class="calc-cap-banner" id="cap-banner">
+            <strong>Au-delà de 200 collaborateurs</strong>, le programme pilote tel que conçu (4 semaines, immersion par service, seule) atteint sa limite opérationnelle. Les chiffres ci-dessous restent indicatifs — on regarde ensemble la meilleure mise en œuvre au diagnostic.
+        </div>
+
         <div class="calc-grid reveal d2">
             <div class="calc-field">
                 <label>Nombre de collaborateurs</label>
-                <div class="field-hint">Effectif total de votre organisation</div>
+                <div class="field-hint">Effectif total de votre organisation · pilote calibré jusqu'à 200</div>
                 <div class="range-val" id="etp-val">75</div>
                 <div class="range-unit">collaborateurs (ETP)</div>
                 <input type="range" id="etp" min="10" max="300" step="5" value="75" oninput="updateCalc()">
@@ -1532,6 +1600,11 @@
             <div class="objection-q">« Qu'est-ce qui se passe quand vous partez ? »</div>
             <div class="objection-a">Rien ne s'évapore — c'est le point central. Les ambassadeurs internes pilotent le système. Les routines sont dans les agendas. Les outils sont dans vos fichiers. <strong>La méthode reste parce qu'elle est dans vos workflows, pas dans ma tête.</strong></div>
         </div>
+
+        <div class="objection reveal d2">
+            <div class="objection-q">« Notre organisation fait plus de 200 collaborateurs. »</div>
+            <div class="objection-a">Le programme s'appuie sur l'immersion réelle par service, pas sur un passage. <strong>Au-delà de 200 collaborateurs, je ne peux plus garantir ce niveau de présence terrain en 4 semaines, seule.</strong> Deux options : un programme rallongé sur mesure, ou une mise en place par vagues avec vos ambassadeurs déjà formés. On regarde ça ensemble au diagnostic.</div>
+        </div>
     </div>
 </section>
 
@@ -1582,6 +1655,7 @@
     /* ── CALCULATEUR ROI ── */
     const PROGRAMME_COST = 3000;
     const COUT_PAR_ETP_HAINAUT = 1654.25; // 165425 / 100
+    const ETP_CAP = 200; // plafond operationnel du programme pilote solo
 
     function fmt(n) {
         return Math.round(n).toLocaleString('fr-BE') + '€';
@@ -1597,6 +1671,14 @@
         document.getElementById('taux-val').innerHTML   = taux.toFixed(1) + '<span style="font-size:1.2rem">%</span>';
         document.getElementById('sal-val').innerHTML    = Math.round(sal).toLocaleString('fr-BE') + '<span style="font-size:1.2rem">€</span>';
         document.getElementById('long-val').innerHTML   = Math.round(longP * 100) + '<span style="font-size:1.2rem">%</span>';
+
+        // Bandeau plafond : visible seulement au-dela de 200 ETP
+        const capBanner = document.getElementById('cap-banner');
+        if (etp > ETP_CAP) {
+            capBanner.classList.add('visible');
+        } else {
+            capBanner.classList.remove('visible');
+        }
 
         // Coût direct : base SD Worx ajustée à l'effectif et au taux réel vs moyenne belge (6.9%)
         const tauxMoy = 6.9;
@@ -1629,6 +1711,8 @@
         let verdict = '';
         if (savings20 <= 0 || !isFinite(savings20)) {
             verdict = 'Ajustez les curseurs pour voir votre situation.';
+        } else if (etp > ETP_CAP) {
+            verdict = `Sur la base de vos paramètres, une réduction de 20% représenterait ${fmt(savings20)}/an. Mais à ${Math.round(etp)} collaborateurs, le programme pilote solo dépasse son plafond opérationnel (200 ETP) — on en discute au diagnostic pour trouver le bon format.`;
         } else if (roi >= 5) {
             verdict = `Sur la base de vos paramètres, une réduction de 20% de l'absentéisme représente ${fmt(savings20)}/an — soit un retour de ×${roiX} sur l'investissement de ${fmt(PROGRAMME_COST)}. Pour ${Math.round(etp)} collaborateurs, le programme se rentabilise en moins de 3 mois.`;
         } else if (roi >= 2) {
